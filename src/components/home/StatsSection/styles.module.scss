@@ -4,12 +4,6 @@
     padding: 5rem 0;
     background-color: $light-gray;
   
-    &__wrapper {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-  
     &__grid {
       display: grid;
       grid-template-columns: repeat(5, 1fr);

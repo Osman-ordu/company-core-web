@@ -24,7 +24,7 @@ const FeaturesSection = () => {
   return (
     <>
       <section className={styles['c-features']}>
-        <div className={styles['c-features__wrapper']}>
+        <div className={`section-container ${styles['c-features__wrapper']}`}>
           <div className={styles['c-features__grid']}>
             {features?.map((feature, index) => (
               <div key={index} className={styles['c-features__item']}>

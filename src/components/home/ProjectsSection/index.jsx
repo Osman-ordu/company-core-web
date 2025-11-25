@@ -73,7 +73,7 @@ const ProjectsSection = () => {
 
   return (
     <section className={styles['c-projects']}>
-      <div className={styles['c-projects__wrapper']}>
+      <div className={`section-container ${styles['c-projects__wrapper']}`}>
         <h2 className={styles['c-projects__title']}>projeler</h2>
         <div className={styles['c-projects__filter-tabs']}>
           {filters.map(filter => (

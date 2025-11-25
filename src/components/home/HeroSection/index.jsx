@@ -27,7 +27,7 @@ const HeroSection = () => {
 
   return (
     <section className={styles['c-hero']}>
-      <div className={styles['c-hero__container']}>
+      <div className={`section-container ${styles['c-hero__container']}`}>
         <div className={styles['c-hero__slider-container']}>
           <Swiper
             ref={swiperRef}

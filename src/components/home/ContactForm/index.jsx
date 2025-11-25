@@ -47,7 +47,7 @@ const ContactForm = () => {
 
   return (
     <section className={styles['c-contact']}>
-      <div className={styles['c-contact__wrapper']}>
+      <div className={`section-container ${styles['c-contact__wrapper']}`}>
         <h2 className={styles['c-contact__title']}>SİZİ ARAYALIM!</h2>
         <form className={styles['c-contact__form']} onSubmit={handleSubmit}>
           <div className={styles['c-contact__group']}>

@@ -6,7 +6,7 @@ const AboutSection = () => {
   return (
     <>
       <section className={styles['c-about']}>
-        <div className={styles['c-about__wrapper']}>
+        <div className={`section-container ${styles['c-about__wrapper']}`}>
           <div className={styles['c-about__content']}>
             <h2 className={styles['c-about__title']}>neden arsago ?</h2>
             <p className={styles['c-about__text']}>
@@ -29,7 +29,7 @@ const AboutSection = () => {
       </section>
 
       <section className={styles['c-partner']}>
-        <div className={styles['c-partner__wrapper']}>
+        <div className={`section-container ${styles['c-partner__wrapper']}`}>
           <div className={styles['c-partner__content']}>
             <h3 className={styles['c-partner__title']}>İş Ortağım programıyla kazanmaya hemen başla!</h3>
             <p className={styles['c-partner__text']}>

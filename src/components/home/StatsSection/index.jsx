@@ -27,7 +27,7 @@ const StatsSection = () => {
       
   return (
     <section className={styles['c-stats']}>
-    <div className={styles['c-stats__wrapper']}>
+    <div className={`section-container ${styles['c-stats__wrapper']}`}>
       <div className={styles['c-stats__grid']}>
         {stats.map((stat, index) => (
           <div key={index} className={styles['c-stats__item']}>

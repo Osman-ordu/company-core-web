@@ -3,15 +3,9 @@
 
 .c-features {
   background-color: transparent;
-  max-width: 1400px;
-  margin: 0 auto;
   padding-top: 2rem;
   @include fade-border-bottom();
 
-  &__wrapper {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
 
   &__grid {
     display: grid;

@@ -12,11 +12,7 @@
 
   &__container {
     display: flex;
-    max-width: 1400px; /* Changed from 1200px to 1400px to match header */
-    margin: 0 auto;
     height: 70vh;
-
-    padding: 0 2rem;
 
     @media (max-width: 1024px) {
       flex-direction: column;
