@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from '../Header';
-import Footer from '../Footer';
-import FooterCopyright from '../FooterCopyright';
+import Header from '../components/layout/Header';
+import Footer from '../components/layout/Footer';
+import FooterCopyright from '../components/layout/FooterCopyright';
 import styles from './styles.module.scss';
 
 const Layout = ({ children }) => {
@@ -16,4 +16,3 @@ const Layout = ({ children }) => {
 };
 
 export default Layout;
-
