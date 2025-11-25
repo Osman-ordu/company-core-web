@@ -1,0 +1,23 @@
+// Mixins for reusable styles
+
+// Fade border bottom - creates a border that fades from edges
+// @param $width: width percentage of the border (default: 80%)
+// @param $color: border color (default: #e0e0e0)
+// @param $height: border height (default: 1px)
+// @param $fade-start: fade start percentage (default: 20%)
+// @param $fade-end: fade end percentage (default: 80%)
+@mixin fade-border-bottom($width: 80%, $color: #e0e0e0, $height: 1px, $fade-start: 20%, $fade-end: 80%) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: $width;
+    height: $height;
+    background: linear-gradient(to right, transparent, $color $fade-start, $color $fade-end, transparent);
+  }
+}
+

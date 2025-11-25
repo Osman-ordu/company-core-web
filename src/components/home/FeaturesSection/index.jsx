@@ -4,24 +4,22 @@ import styles from './styles.module.scss';
 const FeaturesSection = () => {
   const features = [
     {
-      icon: '⏱️',
-      title: 'ZAMANINDA EKSİKSİZ TESLİM',
+      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/zamaninda-teslim-1.svg',
+      title: 'Zamanında eksiksiz teslim',
     },
     {
-      icon: '💰',
-      title: 'VADELİ ÖDEME SEÇENEKLERİ',
+      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/vadeli-odeme-1.svg',
+      title: 'Vadeli ödeme seçenekleri',
     },
     {
-      icon: '🔒',
-      title: 'GÜVENLİ VE ŞEFFAF SÜREÇ YÖNETİMİ',
+      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/search_1265775.svg',
+      title: 'Güvenli ve şeffaf süreç yönetimi',
     },
     {
-      icon: '📈',
-      title: 'YATIRIMDA ALIRKEN KAZANÇ FIRSATI',
+      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/kazanc-firsati-1.svg',
+      title: 'Yatırımda alırken kazanç fırsatı',
     },
   ];
-
-
 
   return (
     <>
@@ -30,7 +28,9 @@ const FeaturesSection = () => {
           <div className={styles['c-features__grid']}>
             {features?.map((feature, index) => (
               <div key={index} className={styles['c-features__item']}>
-                <div className={styles['c-features__icon']}>{feature.icon}</div>
+                <div className={styles['c-features__icon']}>
+                  <img src={feature.icon} alt={feature.title} />
+                </div>
                 <h3 className={styles['c-features__title']}>{feature.title}</h3>
               </div>
             ))}
@@ -42,4 +42,3 @@ const FeaturesSection = () => {
 };
 
 export default FeaturesSection;
-

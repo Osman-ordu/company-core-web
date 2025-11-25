@@ -1,27 +1,26 @@
 @import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
 
 .c-features {
-  padding: 5rem 0;
-  background-color: $white;
+  background-color: transparent;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  @include fade-border-bottom();
 
   &__wrapper {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
   }
 
   &__grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
 
     @media (max-width: 992px) {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media (max-width: 576px) {
-      grid-template-columns: 1fr;
-    }
   }
 
   &__item {
@@ -33,6 +32,16 @@
 
     &:hover {
       transform: translateY(-10px);
+    }
+
+    @media (max-width: 1024px) {
+      padding: 1rem;
+    }
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 0.5rem;
     }
   }
 
@@ -49,13 +58,18 @@
 
   &__title {
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 400;
     margin: 0;
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+    }
   }
 
   &__description {
     color: $text-color;
     line-height: 1.6;
+
   }
 }
 
