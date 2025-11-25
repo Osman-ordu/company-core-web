@@ -49,16 +49,6 @@ const Footer = () => {
           <Link to="/koyum-projesi" className={styles['c-footer__link']}>Köyüm Projesi</Link>
         </div>
       </div>
-
-      <div className={styles['c-footer__copyright']}>
-        <p className={styles['c-footer__copyright-text']}>
-          © 2025 <strong>Arsago</strong> | Bu internet sitesinde yer alan tüm bilgiler ve logoya ilişkin tüm fikri mülkiyet hakları <strong>GO Şirketler Grubu</strong>'na aittir.
-        </p>
-        <div className={styles['c-footer__copyright-links']}>
-          <Link to="/kvkk" className={styles['c-footer__copyright-link']}>KVKK</Link>
-          <Link to="/ticari-iletisim-izni" className={styles['c-footer__copyright-link']}>Ticari İletişim İzni</Link>
-        </div>
-      </div>
     </footer>
   );
 };
