@@ -4,6 +4,7 @@ import FeaturesSection from './FeaturesSection';
 import ContactForm from './ContactForm';
 import ProjectsSection from './ProjectsSection';
 import AboutSection from './AboutSection';
+import PartnerSection from './PartnerSection';
 import StatsSection from './StatsSection';
 
 const HomePage = () => {
@@ -14,6 +15,7 @@ const HomePage = () => {
       <ProjectsSection />
       <StatsSection />
       <AboutSection />
+      <PartnerSection />
       <ContactForm />
     </>
   );
