@@ -1,4 +1,5 @@
 import React from 'react';
+import CImg from '../../CImg';
 import styles from './styles.module.scss';
 
 const FeaturesSection = () => {
@@ -29,7 +30,7 @@ const FeaturesSection = () => {
             {features?.map((feature, index) => (
               <div key={index} className={styles['c-features__item']}>
                 <div className={styles['c-features__icon']}>
-                  <img src={feature.icon} alt={feature.title} />
+                  <CImg src={feature.icon} alt={feature.title} />
                 </div>
                 <h3 className={styles['c-features__title']}>{feature.title}</h3>
               </div>

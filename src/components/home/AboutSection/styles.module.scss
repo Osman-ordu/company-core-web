@@ -63,7 +63,7 @@
     padding-bottom: 56.25%; // 16:9 aspect ratio
     overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px var(--shadow-color);
 
     @media (max-width: 992px) {
       order: 2;

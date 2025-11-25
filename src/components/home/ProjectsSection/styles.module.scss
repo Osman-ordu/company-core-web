@@ -3,7 +3,7 @@
 
 .c-projects {
   padding: 5rem 0;
-  background-color: $white;
+  background-color: var(--bg-primary);
   @include fade-border-bottom();
 
   &__title {
@@ -46,7 +46,7 @@
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
-    background-color: $light-gray;
+    background-color: var(--bg-tertiary);
     color: $secondary-color;
     border-radius: 18px;
     white-space: nowrap;
@@ -64,14 +64,14 @@
       width: 0;
       height: 0;
       border-radius: 50%;
-      background: rgba(36, 165, 32, 0.1);
+      background: var(--primary-hover-background);
       transform: translate(-50%, -50%);
       transition: width 0.6s ease, height 0.6s ease;
     }
     
     &:hover {
       background-color: $primary-color;
-      color: $white;
+      color: var(--bg-primary);
 
       transition: all 0.3s ease;
       
@@ -84,7 +84,7 @@
   
     &--active {
       background-color: $primary-color;
-      color: $white;
+      color: var(--bg-primary);
 
       
       &::before {
@@ -156,7 +156,7 @@
       .c-projects__view-button {
         transform: translateX(5px);
         background-color: $primary-color;
-        color: $white;
+        color: var(--bg-primary);
         border-color: $primary-color;
         
         &::after {
@@ -204,13 +204,14 @@
     font-size: 0.85rem;
     border-radius: 20px;
     font-weight: 600;
-    color: $white;
+    color: var(--bg-primary);
     z-index: 2;
     backdrop-filter: blur(10px);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 
     &--ongoing {
-      background-color: rgba(36, 165, 32, 0.9);
+      background-color: var(--primary-color);
+      opacity: 0.9;
     }
 
     &--completed {
@@ -222,7 +223,7 @@
     padding: 2rem;
     position: relative;
     z-index: 2;
-    color: $white;
+    color: var(--bg-primary);
   }
 
   &__location {
@@ -252,7 +253,7 @@
     gap: 0.5rem;
     padding: 0.75rem 1.5rem;
     background-color: rgba(255, 255, 255, 0.15);
-    color: $white;
+    color: var(--bg-primary);
     font-weight: 600;
     font-size: 0.95rem;
     border-radius: 25px;

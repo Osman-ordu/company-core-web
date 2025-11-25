@@ -1,8 +1,8 @@
 @import '../../../styles/variables.scss';
 
 .c-footer {
-  background-color: $secondary-color;
-  color: $white;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
   padding: 3rem 0;
 
   &__content {
@@ -31,11 +31,11 @@
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: 700;
-    color: $white;
+    color: var(--text-primary);
   }
 
   &__link {
-    color: #ccc;
+    color: var(--gray-medium);
     text-decoration: none;
     margin-bottom: 0.8rem;
     transition: color 0.3s ease;
@@ -75,7 +75,7 @@
   }
 
   &__copyright-text {
-    color: #999;
+    color: var(--gray-dark);
     font-size: 0.9rem;
     
     @media (max-width: 768px) {
@@ -88,7 +88,7 @@
   }
 
   &__copyright-link {
-    color: #999;
+    color: var(--gray-dark);
     text-decoration: none;
     margin-left: 1.5rem;
     font-size: 0.9rem;

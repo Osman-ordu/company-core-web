@@ -41,12 +41,22 @@
 
   &__icon {
     flex-shrink: 0;
-    color: $primary-color;
+    color: var(--primary-color);
+    transition: filter 0.3s ease;
 
     img {
       width: 50px;
       height: 50px;
       object-fit: contain;
+      display: block;
+      // Light mode: yeşil renk (#24a520) için filter
+      filter: brightness(0) saturate(100%) invert(27%) sepia(95%) saturate(1352%) hue-rotate(88deg) brightness(96%) contrast(85%);
+      transition: filter 0.3s ease;
+    }
+
+    // Dark mode için filter ayarı - daha yumuşak yeşil (#10b981)
+    [data-theme="dark"] & img {
+      filter: brightness(0) saturate(100%) invert(58%) sepia(89%) saturate(1200%) hue-rotate(120deg) brightness(95%) contrast(90%);
     }
   }
 

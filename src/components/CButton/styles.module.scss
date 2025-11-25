@@ -61,7 +61,7 @@
     color: $primary-color;
 
     &:hover:not(:disabled) {
-      background-color: rgba(36, 165, 32, 0.1);
+      background-color: var(--primary-hover-background);
     }
   }
 
