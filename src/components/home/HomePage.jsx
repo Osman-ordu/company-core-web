@@ -16,7 +16,6 @@ const HomePage = () => {
       <StatsSection />
       <AboutSection />
       <PartnerSection />
-      <ContactForm />
     </>
   );
 };
