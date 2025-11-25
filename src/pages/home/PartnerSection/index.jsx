@@ -1,5 +1,5 @@
 import React from 'react';
-import CButton from '../../CButton';
+import CButton from '../../../components/CButton';
 import styles from './styles.module.scss';
 
 const PartnerSection = () => {

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import CButton from '../../CButton';
+import CButton from '../../../components/CButton';
 import styles from './styles.module.scss';
 
 const ProjectsSection = () => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import CImg from '../../CImg';
+import CImg from '../../../components/CImg';
 import styles from './styles.module.scss';
 
 const FeaturesSection = () => {

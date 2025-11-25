@@ -5,8 +5,8 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import CContactForm from '../../CContactForm';
-import CImg from '../../CImg';
+import CContactForm from '../../../components/CContactForm';
+import CImg from '../../../components/CImg';
 
 const HeroSection = () => {
   const swiperRef = useRef(null);
@@ -75,13 +75,7 @@ const HeroSection = () => {
                   <picture>
                     <source media="(min-width: 768px)" srcSet={slide.desktopImage} />
                     <source media="(max-width: 767px)" srcSet={slide.mobileImage} />
-                    <CImg 
-                      src={slide.desktopImage} 
-                      alt="Slide" 
-                      className={styles['c-hero__slide-img']}
-                      loading={index === 0 ? 'eager' : 'lazy'}
-                      fetchPriority={index === 0 ? 'high' : undefined}
-                    />
+                    <CImg src={slide.desktopImage} alt="Slide" className={styles['c-hero__slide-img']} loading={index === 0 ? 'eager' : 'lazy'} fetchPriority={index === 0 ? 'high' : undefined} />
                   </picture>
                 </div>
               </SwiperSlide>
