@@ -13,11 +13,10 @@ const HomePage = () => {
       <FeaturesSection />
       <ProjectsSection />
       <StatsSection />
-      <ContactForm />
       <AboutSection />
+      <ContactForm />
     </>
   );
 };
 
 export default HomePage;
-

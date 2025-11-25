@@ -34,6 +34,17 @@ ul, ol {
   list-style: none;
 }
 
+/* Typography */
+h2 {
+  font-size: 33px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  @media (min-width: 993px) {
+    font-size: 50px;
+  }
+}
+
 /* Utility Classes */
 .container {
   max-width: 1200px;

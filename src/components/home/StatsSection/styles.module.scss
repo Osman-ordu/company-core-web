@@ -1,8 +1,10 @@
 @import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
 
 .c-stats {
     padding: 5rem 0;
-    background-color: $light-gray;
+    background-color: transparent;
+    @include fade-border-bottom();
   
     &__grid {
       display: grid;

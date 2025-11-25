@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import CButton from '../../CButton';
 import styles from './styles.module.scss';
 
 const ProjectsSection = () => {
@@ -291,9 +292,9 @@ const ProjectsSection = () => {
           ))}
         </div>
         {hasMoreProjects && !showAll && (
-          <button className={styles['c-projects__load-more']} onClick={() => setShowAll(true)}>
+          <CButton type="secondary" onClick={() => setShowAll(true)} className={styles['c-projects__load-more']}>
             Daha Fazla
-          </button>
+          </CButton>
         )}
       </div>
     </section>

@@ -1,42 +1,47 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import CButton from '../../CButton';
 import styles from './styles.module.scss';
 
 const AboutSection = () => {
+  const videos = {
+    main: '88KbviDjZ2I', // Örnek video ID - değiştirilebilir
+    secondary: 'jNQXAC9IVRw', // Örnek video ID - değiştirilebilir
+    promo: '9bZkp7q19f0', // Örnek video ID - değiştirilebilir
+  };
+
+  const videoUrl = `https://www.youtube.com/embed/${videos.main}?feature=oembed&loop=1&mute=1&controls=0&autoplay=1&playlist=${videos.main}`;
+
   return (
     <>
       <section className={styles['c-about']}>
         <div className={`section-container ${styles['c-about__wrapper']}`}>
+          <h2 className={styles['c-about__title']}>Neden ARSAGO ?</h2>
+          <div className={styles['c-about__video-container']}>
+            <iframe
+              src={videoUrl}
+              allowFullScreen
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              width="100%"
+              height="100%"
+              loading="lazy"
+              className={styles['c-about__video']}
+            ></iframe>
+          </div>
           <div className={styles['c-about__content']}>
-            <h2 className={styles['c-about__title']}>neden arsago ?</h2>
+            <h2 className={styles['c-about__title--desktop']}>Neden ARSAGO ?</h2>
             <p className={styles['c-about__text']}>
               Arsago, gayrimenkul yatırımına yenilikçi bir bakış sunan, arsa geliştirme ve proje üretiminde uzmanlaşmış bir yatırım şirketidir.
-              <br /><br />
+              <br />
+              <br />
               Doğada yaşamı, şehirde kazancı mümkün kılarken; yatırımcılarına risksiz, şeffaf ve sürdürülebilir fırsatlar sunar.
-              <br /><br />
-              "İlk Tarlam" ve "KEP Konut Edindirme Projesi" gibi özgün modellerimizle, yalnızca toprak değil, gelecek de kazandırırız.
-              Bugünün doğru yatırımıyla yarının yaşam alanlarını birlikte inşa ediyoruz.
+              <br />
+              <br />
+              "İlk Tarlam" ve "KEP Konut Edindirme Projesi" gibi özgün modellerimizle, yalnızca toprak değil, gelecek de kazandırırız. Bugünün doğru yatırımıyla yarının yaşam alanlarını birlikte inşa
+              ediyoruz.
             </p>
-            <Link to="/hakkimizda" className={styles['c-about__button']}>Hakkımızda</Link>
-          </div>
-          <div className={styles['c-about__image-container']}>
-            <div 
-              className={styles['c-about__image']} 
-              style={{ backgroundImage: 'url(https://via.placeholder.com/600x400)' }}
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className={styles['c-partner']}>
-        <div className={`section-container ${styles['c-partner__wrapper']}`}>
-          <div className={styles['c-partner__content']}>
-            <h3 className={styles['c-partner__title']}>İş Ortağım programıyla kazanmaya hemen başla!</h3>
-            <p className={styles['c-partner__text']}>
-              Arsago İş Ortağım Programı, bireysel ve kurumsal emlak danışmanlarına doğrudan ve
-              öncelikli Arsago projelerine erişim sağlayan kârlı ve sürdürülebilir bir iş modeli sunar.
-            </p>
-            <Link to="/is-ortagim" className={styles['c-partner__button']}>Üye İş Yeri Olmak İstiyorum</Link>
+            <CButton type="primary" to="/hakkimizda">
+              Hakkımızda
+            </CButton>
           </div>
         </div>
       </section>
@@ -45,4 +50,3 @@ const AboutSection = () => {
 };
 
 export default AboutSection;
-
