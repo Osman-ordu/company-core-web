@@ -1,0 +1,56 @@
+@import '../../styles/variables.scss';
+
+.c-theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+  margin-left: 1rem;
+
+  &:hover {
+    background-color: var(--primary-hover-background);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &:hover &__icon {
+    transform: rotate(15deg);
+  }
+
+  @media (max-width: 768px) {
+    width: 36px;
+    height: 36px;
+    margin-left: 0.5rem;
+
+    &__icon svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}
+

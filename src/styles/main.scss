@@ -12,8 +12,10 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $secondary-color;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 img {
@@ -81,15 +83,15 @@ h2 {
 .px-5 { padding-left: 3rem; padding-right: 3rem; }
 
 /* Colors */
-.text-primary { color: $primary-color; }
-.text-dark { color: $secondary-color; }
-.text-light { color: $light-gray; }
-.text-gray { color: $text-color; }
+.text-primary { color: var(--primary-color); }
+.text-dark { color: var(--text-primary); }
+.text-light { color: var(--text-light); }
+.text-gray { color: var(--text-secondary); }
 
-.bg-primary { background-color: $primary-color; }
-.bg-dark { background-color: $secondary-color; }
-.bg-light { background-color: $light-gray; }
-.bg-white { background-color: $white; }
+.bg-primary { background-color: var(--primary-color); }
+.bg-dark { background-color: var(--text-primary); }
+.bg-light { background-color: var(--bg-tertiary); }
+.bg-white { background-color: var(--bg-primary); }
 
 /* Responsive */
 @media (max-width: 1200px) {

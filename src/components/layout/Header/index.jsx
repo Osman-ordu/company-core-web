@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import ThemeToggle from '../../ThemeToggle';
 import styles from './styles.module.scss';
 
 const Header = () => {
@@ -37,8 +38,9 @@ const Header = () => {
           <Link to="/is-ortagim" className={styles['c-header__nav-link']}>İş Ortağım</Link>
           <Link to="/iletisim" className={styles['c-header__nav-link']}>İletişim</Link>
           <div className={styles['c-header__actions']}>
-          <a href="tel:4440982" className={styles['c-header__phone-number']}>444 0 982</a>
-        </div>
+            <ThemeToggle />
+            <a href="tel:4440982" className={styles['c-header__phone-number']}>444 0 982</a>
+          </div>
         </nav>
         <button 
           className={`${styles['c-header__hamburger']} ${mobileMenuOpen ? styles['c-header__hamburger--open'] : ''}`} 
@@ -56,6 +58,7 @@ const Header = () => {
           <div className={styles['c-header__mobile-content']}>
             <Link to="/" className={`${styles['c-header__mobile-logo']} ${!mobileMenuOpen ? styles['c-header__mobile-logo--hidden'] : ''}`}>ARSAGO</Link>
             <div className={styles['c-header__mobile-close-wrapper']}>
+              <ThemeToggle />
               <button 
                 className={`${styles['c-header__hamburger']} ${styles['c-header__hamburger--open']}`} 
                 onClick={toggleMobileMenu}

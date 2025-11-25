@@ -1,11 +1,75 @@
-// Color variables
-$primary-color: #24a520;
-$primary-hover: #1e8a1a;
-$primary-hover-background: #c8e8c7;
-$secondary-color: #333;
-$text-color: #444;
-$light-bg: #f9f9f9;
-$white: #fff;
-$light-gray: #f5f5f5;
-$border-color: #ddd;
-$disabled-color: #ccc;
+// CSS Variables for Light Mode (default)
+:root {
+  // Primary colors
+  --primary-color: #24a520;
+  --primary-hover: #1e8a1a;
+  --primary-hover-background: #c8e8c7;
+  
+  // Text colors
+  --text-primary: #333;
+  --text-secondary: #444;
+  --text-light: #f5f5f5;
+  
+  // Background colors
+  --bg-primary: #fff;
+  --bg-secondary: #f9f9f9;
+  --bg-tertiary: #f5f5f5;
+  
+  // Border colors
+  --border-color: #ddd;
+  --border-light: #eee;
+  
+  // Other colors
+  --disabled-color: #ccc;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --overlay-color: rgba(0, 0, 0, 0.5);
+  
+  // Specific colors
+  --gray-light: #eee;
+  --gray-medium: #ccc;
+  --gray-dark: #999;
+}
+
+// CSS Variables for Dark Mode
+[data-theme="dark"] {
+  // Primary colors (alternative: warmer, more elegant green)
+  --primary-color: #10b981;
+  --primary-hover: #059669;
+  --primary-hover-background: rgba(16, 185, 129, 0.15);
+  
+  // Text colors
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-light: #ffffff;
+  
+  // Background colors (alternative: warmer dark with subtle blue-gray)
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #1a1f2e;
+  --bg-tertiary: #252b3a;
+  
+  // Border colors
+  --border-color: #3a4150;
+  --border-light: #2a3140;
+  
+  // Other colors
+  --disabled-color: #6b7280;
+  --shadow-color: rgba(0, 0, 0, 0.7);
+  --overlay-color: rgba(0, 0, 0, 0.8);
+  
+  // Specific colors
+  --gray-light: #2a3140;
+  --gray-medium: #6b7280;
+  --gray-dark: #9ca3af;
+}
+
+// SCSS Variables (for backward compatibility and SCSS-specific features)
+$primary-color: var(--primary-color);
+$primary-hover: var(--primary-hover);
+$primary-hover-background: var(--primary-hover-background);
+$secondary-color: var(--text-primary);
+$text-color: var(--text-secondary);
+$light-bg: var(--bg-secondary);
+$white: var(--bg-primary);
+$light-gray: var(--bg-tertiary);
+$border-color: var(--border-color);
+$disabled-color: var(--disabled-color);
