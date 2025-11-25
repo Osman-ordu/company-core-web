@@ -1,0 +1,91 @@
+@import '../../styles/variables.scss';
+
+.c-button {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.5;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  // Primary variant
+  &--primary {
+    background-color: $primary-color;
+    color: $white;
+    border: 2px solid $primary-color;
+
+    &:hover:not(:disabled) {
+      background-color: $primary-hover;
+      border-color: $primary-hover;
+    }
+  }
+
+  // Secondary variant
+  &--secondary {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+
+    &:hover:not(:disabled) {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  // Outline variant (same as secondary but different naming)
+  &--outline {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+
+    &:hover:not(:disabled) {
+      background-color: $primary-color;
+      color: $white;
+    }
+  }
+
+  // Ghost variant (no border)
+  &--ghost {
+    background-color: transparent;
+    border: none;
+    color: $primary-color;
+
+    &:hover:not(:disabled) {
+      background-color: rgba(36, 165, 32, 0.1);
+    }
+  }
+
+  // Full width variant
+  &--full {
+    width: 100%;
+    display: block;
+  }
+
+  // Small size
+  &--small {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.875rem;
+  }
+
+  // Large size
+  &--large {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+  }
+
+  @media (max-width: 576px) {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
