@@ -1,0 +1,12 @@
+.c-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+
+  &--loaded {
+    opacity: 1;
+  }
+}
+
