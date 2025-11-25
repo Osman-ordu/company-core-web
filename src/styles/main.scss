@@ -1,4 +1,6 @@
+/* Base styles */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import './variables.scss';
 
 * {
   margin: 0;
@@ -10,13 +12,8 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #333;
+  color: $secondary-color;
   line-height: 1.6;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
 }
 
 img {
@@ -73,15 +70,15 @@ ul, ol {
 .px-5 { padding-left: 3rem; padding-right: 3rem; }
 
 /* Colors */
-.text-primary { color: #24a520; }
-.text-dark { color: #333; }
-.text-light { color: #f5f5f5; }
-.text-gray { color: #666; }
+.text-primary { color: $primary-color; }
+.text-dark { color: $secondary-color; }
+.text-light { color: $light-gray; }
+.text-gray { color: $text-color; }
 
-.bg-primary { background-color: #24a520; }
-.bg-dark { background-color: #333; }
-.bg-light { background-color: #f5f5f5; }
-.bg-white { background-color: #fff; }
+.bg-primary { background-color: $primary-color; }
+.bg-dark { background-color: $secondary-color; }
+.bg-light { background-color: $light-gray; }
+.bg-white { background-color: $white; }
 
 /* Responsive */
 @media (max-width: 1200px) {
@@ -108,3 +105,66 @@ ul, ol {
     padding: 0 1rem;
   }
 }
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: $primary-color;
+  color: $white;
+}
+
+.btn-primary:hover {
+  background-color: $primary-hover;
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid $primary-color;
+  color: $primary-color;
+}
+
+.btn-outline:hover {
+  background-color: $primary-color;
+  color: $white;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slide-in {
+  animation: slideInFromBottom 0.5s ease-out;
+}
+
