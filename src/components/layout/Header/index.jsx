@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import ThemeToggle from '../../CThemeToggle';
 import styles from './styles.module.scss';
 
@@ -29,24 +29,24 @@ const Header = () => {
           ARSAGO
         </Link>
         <nav className={styles['c-header__nav-links']}>
-          <Link to="/projeler" className={styles['c-header__nav-link']}>
+          <NavLink to="/projeler" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
             Projeler
-          </Link>
-          <Link to="/hakkimizda" className={styles['c-header__nav-link']}>
+          </NavLink>
+          <NavLink to="/hakkimizda" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
             Hakkımızda
-          </Link>
-          <Link to="/kampanyalar" className={styles['c-header__nav-link']}>
+          </NavLink>
+          <NavLink to="/kampanyalar" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
             Kampanyalar
-          </Link>
-          <Link to="/basinda-biz" className={styles['c-header__nav-link']}>
+          </NavLink>
+          <NavLink to="/basinda-biz" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
             Basında Biz
-          </Link>
-          <Link to="/is-ortagim" className={styles['c-header__nav-link']}>
+          </NavLink>
+          <NavLink to="/is-ortagim" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
             İş Ortağım
-          </Link>
-          <Link to="/iletisim" className={styles['c-header__nav-link']}>
+          </NavLink>
+          <NavLink to="/iletisim" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
             İletişim
-          </Link>
+          </NavLink>
           <div className={styles['c-header__actions']}>
             <ThemeToggle />
             <a href="tel:4440982" className={styles['c-header__phone-number']}>
@@ -78,24 +78,24 @@ const Header = () => {
           </div>
         </header>
         <div className={styles['c-header__mobile-nav']}>
-          <Link to="/projeler" className={styles['c-header__mobile-nav-link']}>
+          <NavLink to="/projeler" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`}>
             Projeler
-          </Link>
-          <Link to="/hakkimizda" className={styles['c-header__mobile-nav-link']}>
+          </NavLink>
+          <NavLink to="/hakkimizda" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`}>
             Hakkımızda
-          </Link>
-          <Link to="/kampanyalar" className={styles['c-header__mobile-nav-link']}>
+          </NavLink>
+          <NavLink to="/kampanyalar" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`}>
             Kampanyalar
-          </Link>
-          <Link to="/basinda-biz" className={styles['c-header__mobile-nav-link']}>
+          </NavLink>
+          <NavLink to="/basinda-biz" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`}>
             Basında Biz
-          </Link>
-          <Link to="/is-ortagim" className={styles['c-header__mobile-nav-link']}>
+          </NavLink>
+          <NavLink to="/is-ortagim" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`}>
             İş Ortağım
-          </Link>
-          <Link to="/iletisim" className={styles['c-header__mobile-nav-link']}>
+          </NavLink>
+          <NavLink to="/iletisim" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`}>
             İletişim
-          </Link>
+          </NavLink>
           <a href="tel:4440982" className={`${styles['c-header__mobile-nav-link']} ${styles['c-header__mobile-phone']}`}>
             <span>444 0 982</span>
           </a>

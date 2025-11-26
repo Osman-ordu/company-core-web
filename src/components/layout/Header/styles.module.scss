@@ -68,6 +68,12 @@
       border-radius: 22px;
       transition: all 0.3s ease;
     }
+
+    &--active {
+      background-color: $primary-hover-background;
+      color: $primary-color;
+      border-radius: 22px;
+    }
   }
 
   &__phone-number {
@@ -224,6 +230,8 @@
     border-bottom: 1px solid var(--border-light);
     text-align: left;
     font-size: 1rem;
+    transition: all 0.2s linear;
+
     
     &:last-child {
       border-bottom: none;
@@ -231,6 +239,11 @@
 
     &:hover {
       color: $primary-color;
+    }
+
+    &--active {
+      color: $primary-color;
+      margin-left: 0.3rem;
     }
   }
   
