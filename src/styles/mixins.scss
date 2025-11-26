@@ -6,7 +6,7 @@
 // @param $height: border height (default: 1px)
 // @param $fade-start: fade start percentage (default: 20%)
 // @param $fade-end: fade end percentage (default: 80%)
-@mixin fade-border-bottom($width: 80%, $color: #e0e0e0, $height: 1px, $fade-start: 20%, $fade-end: 80%) {
+@mixin fade-border-bottom($width: 80%, $color: var(--border-color-secondary), $height: 1px, $fade-start: 20%, $fade-end: 80%) {
   position: relative;
 
   &::after {

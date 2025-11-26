@@ -5,6 +5,10 @@
     padding: 5rem 0;
     background-color: transparent;
     @include fade-border-bottom();
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
   
     &__grid {
       display: grid;

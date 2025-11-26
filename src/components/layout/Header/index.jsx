@@ -8,18 +8,15 @@ const Header = () => {
 
   const toggleMobileMenu = () => {
     if (mobileMenuOpen) {
-      // Close menu with animation
       const mobileMenu = document.querySelector(`.${styles['c-header__mobile-menu']}`);
       mobileMenu.classList.add(styles['c-header__mobile-menu--closing']);
 
-      // Wait for animation to complete before hiding
       setTimeout(() => {
         setMobileMenuOpen(false);
         mobileMenu.classList.remove(styles['c-header__mobile-menu--closing']);
         document.body.style.overflow = '';
-      }, 100); // Same duration as CSS transition
+      }, 100);
     } else {
-      // Open menu
       setMobileMenuOpen(true);
       document.body.style.overflow = 'hidden';
     }

@@ -6,7 +6,7 @@
   --primary-hover-background: #c8e8c7;
   
   // Text colors
-  --text-primary: #333;
+  --text-primary: #000;
   --text-secondary: #444;
   --text-light: #f5f5f5;
   
@@ -51,6 +51,7 @@
   // Border colors
   --border-color: #3a4150;
   --border-light: #2a3140;
+  --border-color-secondary: #3a4150;
   
   // Other colors
   --disabled-color: #6b7280;
@@ -74,3 +75,4 @@ $white: var(--bg-primary);
 $light-gray: var(--bg-tertiary);
 $border-color: var(--border-color);
 $disabled-color: var(--disabled-color);
+$text-light: var(--text-light);
