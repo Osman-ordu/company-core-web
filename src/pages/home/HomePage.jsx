@@ -10,7 +10,7 @@ import { CAnimatedWrapper } from '../../components/CAnimatedWrapper';
 const HomePage = () => {
   return (
     <>
-      <CAnimatedWrapper variant="smoothScale" delay={0.1}>
+      <CAnimatedWrapper variant="scaleOpacity" delay={0.1}>
         <HeroSection />
       </CAnimatedWrapper>
       <CAnimatedWrapper variant="scaleOpacity" delay={0.1}>

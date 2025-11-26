@@ -364,3 +364,38 @@ export const features = [
         label: 'mutlu müşteri',
       },
     ];
+
+    export   const campaigns = [
+      {
+        image: 'https://arsago.com.tr/wp-content/uploads/2025/09/Kare-2.jpg',
+        title: "180 Bin TL Peşinatla Kapadokya'da\nArsa Sahibi Olun!",
+        content:
+          "Kapadokya'da kendi evinin sahibi olmanın yolu: önce arsa, sonra hayalindeki yaşam!\n\n• 250 – 470 m² arası turizm imarlı müstakil tapulu parseller\n• 99 parsel | 6 aya varan taksit avantajı\n• UNESCO mirası Kapadokya'nın kalbinde\n\nDetaylı bilgi almak ve fırsatları kaçırmamak için hemen formu doldurun.",
+        buttonText: 'form doldurun',
+        reverse: false,
+      },
+      {
+        image: 'https://arsago.com.tr/wp-content/uploads/2025/08/kirikkale.jpg',
+        title: "Kırıkkale'de 1.800.000 TL'ye Ev Sahibi Olun!",
+        content:
+          "Kırıkkale'de kendi evinin sahibi olmanın yolu: önce arsa, sonra hayalindeki yaşam!\n\n• 250 – 470 m² arası turizm imarlı müstakil tapulu parseller\n• 99 parsel | 6 aya varan taksit avantajı\n• UNESCO mirası Kapadokya'nın kalbinde\n\nDetaylı bilgi almak ve fırsatları kaçırmamak için hemen formu doldurun.",
+        buttonText: 'form doldurun',
+        reverse: true,
+      },
+      {
+        image: 'https://arsago.com.tr/wp-content/uploads/2025/08/kibris.jpg',
+        title: "Kıbrıs'ta 2.800.000 TL'ye Ev Sahibi Olun!",
+        content:
+          "Kıbrıs'ta kendi evinin sahibi olmanın yolu: önce arsa, sonra hayalindeki yaşam!\n\n• 250 – 470 m² arası turizm imarlı müstakil tapulu parseller\n• 99 parsel | 6 aya varan taksit avantajı\n• UNESCO mirası Kapadokya'nın kalbinde\n\nDetaylı bilgi almak ve fırsatları kaçırmamak için hemen formu doldurun.",
+        buttonText: 'form doldurun',
+        reverse: false,
+      },
+      {
+        image: 'https://arsago.com.tr/wp-content/uploads/2025/08/sile.png',
+        title: "İstanbul'da 2.800.000 TL'ye Ev Sahibi Olun!",
+        content:
+          "Şile'de kendi evinin sahibi olmanın yolu: önce arsa, sonra hayalindeki yaşam!\n\n• 250 – 470 m² arası turizm imarlı müstakil tapulu parseller\n• 99 parsel | 6 aya varan taksit avantajı\n• UNESCO mirası Kapadokya'nın kalbinde\n\nDetaylı bilgi almak ve fırsatları kaçırmamak için hemen formu doldurun.",
+        buttonText: 'form doldurun',
+        reverse: true,
+      },
+    ];
