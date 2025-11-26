@@ -1,21 +1,16 @@
+// src/App.jsx
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Layout from './layout';
-import HomePage from './pages/home/HomePage';
+import AppRoutes from './routes/AppRoutes';
 import './App.css';
 
 function App() {
   return (
     <ThemeProvider>
-      <Router>
-        <Layout>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            {/* Add more routes here as needed */}
-          </Routes>
-        </Layout>
-      </Router>
+      <Layout>
+        <AppRoutes />
+      </Layout>
     </ThemeProvider>
   );
 }
