@@ -1,27 +1,9 @@
 import React from 'react';
 import CImg from '../../../components/CImg';
+import { features } from '../../../db/General';
 import styles from './styles.module.scss';
 
 const FeaturesSection = () => {
-  const features = [
-    {
-      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/zamaninda-teslim-1.svg',
-      title: 'Zamanında eksiksiz teslim',
-    },
-    {
-      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/vadeli-odeme-1.svg',
-      title: 'Vadeli ödeme seçenekleri',
-    },
-    {
-      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/search_1265775.svg',
-      title: 'Güvenli ve şeffaf süreç yönetimi',
-    },
-    {
-      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/kazanc-firsati-1.svg',
-      title: 'Yatırımda alırken kazanç fırsatı',
-    },
-  ];
-
   return (
     <>
       <section className={styles['c-features']}>

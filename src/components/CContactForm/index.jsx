@@ -1,22 +1,9 @@
 import React from 'react';
 import { useForm, Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
+import { contactFormSchema } from '../../utils/validations';
+import { cities } from '../../db/General';
 import styles from './styles.module.scss';
-
-const contactFormSchema = yup.object().shape({
-  name: yup.string().required('Adınız gereklidir').min(2, 'Adınız en az 2 karakter olmalıdır'),
-  city: yup.string().required('Şehir seçimi gereklidir'),
-  phone: yup
-    .string()
-    .required('Telefon numaranız gereklidir')
-    .matches(/^[0-9]+$/, 'Geçerli bir telefon numarası giriniz')
-    .min(10, 'Telefon numaranız en az 10 karakter olmalıdır')
-    .max(11, 'Telefon numaranız en fazla 11 karakter olabilir'),
-  email: yup.string().required('E-posta adresiniz gereklidir').email('Geçerli bir e-posta adresi giriniz'),
-  kvkk: yup.boolean().oneOf([true], 'KVKK onayı gereklidir'),
-  marketing: yup.boolean(),
-});
 
 const CContactForm = ({ className = '', containerClassName = '' }) => {
   const {
@@ -36,12 +23,9 @@ const CContactForm = ({ className = '', containerClassName = '' }) => {
     },
   });
 
-  const cities = ['İstanbul', 'Ankara', 'İzmir', 'Bursa', 'Antalya', 'Adana', 'Konya', 'Gaziantep', 'Şanlıurfa', 'Kocaeli', 'Mersin', 'Diyarbakır', 'Hatay', 'Manisa'];
-
   const handlePhoneChange = (e, onChange) => {
-    const value = e.target.value.replace(/\D/g, ''); // Sadece rakamları al
+    const value = e.target.value.replace(/\D/g, '');
     if (value.length <= 11) {
-      // Max 11 karakter
       onChange(value);
     }
   };

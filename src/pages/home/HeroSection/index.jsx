@@ -7,24 +7,10 @@ import 'swiper/css/navigation';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 import CContactForm from '../../../components/CContactForm';
 import CImg from '../../../components/CImg';
+import { heroSlides } from '../../../db/General';
 
 const HeroSection = () => {
   const swiperRef = useRef(null);
-
-  const slides = [
-    {
-      desktopImage: 'https://arsago.com.tr/wp-content/uploads/2025/08/web-1100x660px.jpg',
-      mobileImage: 'https://arsago.com.tr/wp-content/uploads/2025/08/mobil-480x720px.jpg',
-    },
-    {
-      desktopImage: 'https://arsago.com.tr/wp-content/uploads/2025/04/mugla-web.jpg',
-      mobileImage: 'https://arsago.com.tr/wp-content/uploads/2025/06/mugla-mobil.jpg',
-    },
-    {
-      desktopImage: 'https://arsago.com.tr/wp-content/uploads/2025/08/1_Web.jpg',
-      mobileImage: 'https://arsago.com.tr/wp-content/uploads/2025/08/1_Mobil.jpg',
-    },
-  ];
 
   return (
     <section className={styles['c-hero']}>
@@ -69,7 +55,7 @@ const HeroSection = () => {
             className={styles['c-hero__slider']}
             speed={800}
           >
-            {slides.map((slide, index) => (
+            {heroSlides.map((slide, index) => (
               <SwiperSlide key={index} className={styles['c-hero__slide']}>
                 <div className={styles['c-hero__slide-bg']}>
                   <picture>
