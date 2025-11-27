@@ -230,8 +230,10 @@
     border-bottom: 1px solid var(--border-light);
     text-align: left;
     font-size: 1rem;
-    transition: all 0.2s linear;
-
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    transition: color 0.2s ease;
     
     &:last-child {
       border-bottom: none;
@@ -243,8 +245,21 @@
 
     &--active {
       color: $primary-color;
-      margin-left: 0.3rem;
     }
+  }
+
+  &__mobile-nav-icon {
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+    color: inherit;
+    width: 1.5rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: transparent;
+    flex-shrink: 0;
   }
   
   &__mobile-phone {
@@ -271,21 +286,37 @@
   }
   
   &__mobile-contact-title {
-    font-size: 1.3rem;
-    font-weight: 600;
+    font-size: 1.3rem !important;
+    font-weight: 600 !important;
     color: $primary-color;
     margin-bottom: 1.5rem;
   }
   
   &__mobile-contact-item {
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.2rem !important;
   }
   
   &__mobile-contact-subtitle {
-    font-size: 0.9rem;
+    font-size: 1.2rem !important;
     font-weight: 600;
     margin-bottom: 0.3rem;
     color: $secondary-color;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__mobile-contact-icon {
+    font-size: 1rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: transparent;
+    flex-shrink: 0;
+    color: $primary-color;
   }
   
   &__mobile-contact-text {
