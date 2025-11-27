@@ -344,24 +344,16 @@ export const features = [
 
   export const stats = [
       {
-        number: '81',
-        label: 'ülke',
+        number: 22,
+        label: 'Yıllık tecrübe',
       },
       {
-        number: '30+',
-        label: 'şehir',
+        number: 12,
+        label: 'Proje',
       },
       {
-        number: '50+',
-        label: 'tamamlanan proje',
-      },
-      {
-        number: '5M+',
-        label: 'm² proje alanı',
-      },
-      {
-        number: '10K+',
-        label: 'mutlu müşteri',
+        number: 2535,
+        label: 'Memnun müşteri',
       },
     ];
 
@@ -399,3 +391,9 @@ export const features = [
         reverse: true,
       },
     ];
+
+    export  const videos = {
+      main: 'Q887wtIdozA',
+      secondary: '2TDLK92kzM',
+      promo: 'RW9dalk7YLw',
+    };

@@ -3,7 +3,7 @@ import React from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
 import Layout from './layout';
 import AppRoutes from './routes/AppRoutes';
-import './App.css';
+import './index.css';
 
 function App() {
   return (

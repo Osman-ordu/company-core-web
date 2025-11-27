@@ -41,7 +41,11 @@ const CContactForm = ({ className = '', containerClassName = '' }) => {
         <form onSubmit={handleSubmit(onSubmit)} className={styles['c-contact-form__form']}>
           <div className={styles['c-contact-form__group']}>
             <label htmlFor="name">Adınız</label>
-            <Controller name="name" control={control} render={({ field }) => <input type="text" id="name" {...field} className={errors.name ? styles['c-contact-form__input-error'] : ''} />} />
+            <Controller
+              name="name"
+              control={control}
+              render={({ field }) => <input placeholder="Adınız" type="text" id="name" {...field} className={errors.name ? styles['c-contact-form__input-error'] : ''} />}
+            />
           </div>
 
           <div className={styles['c-contact-form__group']}>
@@ -69,6 +73,7 @@ const CContactForm = ({ className = '', containerClassName = '' }) => {
               control={control}
               render={({ field }) => (
                 <input
+                  placeholder="Telefon Numaranız"
                   type="tel"
                   id="phone"
                   {...field}
@@ -84,7 +89,11 @@ const CContactForm = ({ className = '', containerClassName = '' }) => {
 
           <div className={styles['c-contact-form__group']}>
             <label htmlFor="email">E-posta Adresiniz</label>
-            <Controller name="email" control={control} render={({ field }) => <input type="email" id="email" {...field} className={errors.email ? styles['c-contact-form__input-error'] : ''} />} />
+            <Controller
+              name="email"
+              control={control}
+              render={({ field }) => <input placeholder="E-posta Adresiniz" type="email" id="email" {...field} className={errors.email ? styles['c-contact-form__input-error'] : ''} />}
+            />
           </div>
 
           <div className={`${styles['c-contact-form__checkbox']} ${errors.kvkk ? styles['c-contact-form__checkbox-error'] : ''}`}>

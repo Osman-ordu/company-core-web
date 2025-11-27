@@ -1,31 +1,17 @@
 import React from 'react';
 import CButton from '../../../components/CButton';
+import CVideo from '../../../components/CVideo';
 import styles from './styles.module.scss';
+import { videos } from '../../../db/General';
 
 const AboutSection = () => {
-  const videos = {
-    main: '88KbviDjZ2I', // Örnek video ID - değiştirilebilir
-    secondary: 'jNQXAC9IVRw', // Örnek video ID - değiştirilebilir
-    promo: '9bZkp7q19f0', // Örnek video ID - değiştirilebilir
-  };
-
-  const videoUrl = `https://www.youtube.com/embed/${videos.main}?feature=oembed&loop=1&mute=1&controls=0&autoplay=1&playlist=${videos.main}`;
-
   return (
     <>
       <section className={styles['c-about']}>
         <div className={`section-container ${styles['c-about__wrapper']}`}>
           <h2 className={styles['c-about__title']}>Neden ARSAGO ?</h2>
           <div className={styles['c-about__video-container']}>
-            <iframe
-              src={videoUrl}
-              allowFullScreen
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              width="100%"
-              height="100%"
-              loading="lazy"
-              className={styles['c-about__video']}
-            ></iframe>
+            <CVideo videoId={videos.main} className={styles['c-about__video']} />
           </div>
           <div className={styles['c-about__content']}>
             <h2 className={styles['c-about__title--desktop']}>Neden ARSAGO ?</h2>
