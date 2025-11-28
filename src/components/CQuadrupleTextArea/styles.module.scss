@@ -1,0 +1,81 @@
+@use '../../styles/variables.scss' as *;
+
+.c-quadruple-text-area {
+  background: transparent;
+  padding-top: 2rem;
+
+
+  [data-theme="dark"] & {
+    ::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(https://arsago.com.tr/wp-content/uploads/2025/04/green-lines.svg);
+      background-position: center center;
+      z-index: 0;
+      pointer-events: none;
+      transition: filter 0.3s ease;
+      filter: brightness(1) saturate(1.2);
+      opacity: 0.1;
+}
+  }
+  &__container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width : 100%;
+    justify-content: space-between;
+    gap: 1rem;
+    border-radius: 1rem;
+    background-color: var(--bg-white-to-transparent);
+    box-shadow: 0 0 15px 0 var(--shadow-color);
+    position: relative;
+    z-index: 1;
+    margin-bottom: -3rem;
+    // Dark mode için özel stiller
+    [data-theme="dark"] & {
+      box-shadow: none;
+      background-color: var(--bg-secondary);
+
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.6rem;
+    width:calc(25% - 1.6rem);
+
+
+
+    @media (max-width: 1024px) {
+        width: 50%;
+        gap: 1rem;
+      }
+  
+      @media (max-width: 992px) {
+        width: 100%;
+        gap: 2rem;
+      }
+  
+  }
+
+  &__field-title {
+    font-size: 1.8rem !important; // 20px
+    color: var(--text-heading);
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  &__field-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.6;
+  }
+}
