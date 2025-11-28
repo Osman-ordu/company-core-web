@@ -14,19 +14,17 @@ import { CAnimatedWrapper } from '../../components/CAnimatedWrapper';
 const About = () => {
   return (
     <div className={styles['c-about']}>
-      <CAnimatedWrapper variant="scaleOpacity" delay={0.1}>
-        <div className={`section-container ${styles['c-about__wrapper']}`}>
-          <div className={styles['c-about__video-section']}>
-            <div className={styles['c-about__video-container']}>
-              <CVideo videoId={videos.promo} className={styles['c-about__video']} />
-            </div>
-          </div>
-          <div className={styles['c-about__container-wrapper']}>
-            <CContent />
-            <CTimeline className={styles['c-about__timeline-container']} items={timelineItems} />
+      <div className={`section-container ${styles['c-about__wrapper']}`}>
+        <div className={styles['c-about__video-section']}>
+          <div className={styles['c-about__video-container']}>
+            <CVideo videoId={videos.promo} className={styles['c-about__video']} />
           </div>
         </div>
-      </CAnimatedWrapper>
+        <div className={styles['c-about__container-wrapper']}>
+          <CContent />
+          <CTimeline className={styles['c-about__timeline-container']} items={timelineItems} />
+        </div>
+      </div>
       <CStats />
       <CQuadrupleArea />
       <CAnimatedWrapper variant="scaleOpacity" delay={0.15}>
