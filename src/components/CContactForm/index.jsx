@@ -5,7 +5,7 @@ import { contactFormSchema } from '../../utils/validations';
 import { cities } from '../../db/General';
 import styles from './styles.module.scss';
 
-const CContactForm = ({ className = '', containerClassName = '' }) => {
+const CContactForm = ({ className = '', containerClassName = '', title = 'Sizi Arayalım!', description = '' }) => {
   const {
     handleSubmit,
     control,
@@ -37,7 +37,8 @@ const CContactForm = ({ className = '', containerClassName = '' }) => {
   return (
     <div className={`${styles['c-contact-form__container']} ${containerClassName}`}>
       <div className={`${styles['c-contact-form__card']} ${className}`}>
-        <h2 className={styles['c-contact-form__title']}>Sizi Arayalım!</h2>
+        <h2 className={styles['c-contact-form__title']}>{title}</h2>
+        <p className={styles['c-contact-form__description']}>{description}</p>
         <form onSubmit={handleSubmit(onSubmit)} className={styles['c-contact-form__form']}>
           <div className={styles['c-contact-form__group']}>
             <label htmlFor="name">Adınız</label>
