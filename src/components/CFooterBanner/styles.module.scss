@@ -1,0 +1,37 @@
+.c-footer-banner {
+  background-color: var(--bg-secondary);
+  background-image: url('https://arsago.com.tr/wp-content/uploads/2025/04/topraklabaslayangelecek-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 0;
+  width: 100%;
+  min-height: 100vh;
+
+  @media (max-width: 768px) {
+   background-image: url('https://arsago.com.tr/wp-content/uploads/2025/05/topraklabaslayangelecek.png');
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+
+  &__title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-align: center;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    margin-top: 5rem;
+  }
+
+
+}
