@@ -1,0 +1,8 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins.scss' as *;
+
+.c-projects {
+  padding: 5rem 0;
+  background-color: var(--bg-primary);
+  @include fade-border-bottom();
+}
