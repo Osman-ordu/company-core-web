@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './styles.module.scss';
 import CContactContainer from '../../components/CContactContainer';
 import CGoogleMap from '../../components/CGoogleMap';
+import { CAnimatedWrapper } from '../../components/CAnimatedWrapper';
 
 const Contact = () => {
   const address = ['şair necmettin halil onan blv.,', '34540 çatalca/istanbul'];
@@ -10,9 +11,13 @@ const Contact = () => {
 
   return (
     <div className={styles['c-contact']}>
-      <CGoogleMap companyName="Arsalife Gayrimenkul" companySubtitle="" address={address} latitude={latitude} longitude={longitude} />
+      <CAnimatedWrapper variant="scaleOpacity" delay={0.1}>
+        <CGoogleMap companyName="Arsalife Gayrimenkul" companySubtitle="" address={address} latitude={latitude} longitude={longitude} />
+      </CAnimatedWrapper>
       <div className={`section-container`}>
-        <CContactContainer />
+        <CAnimatedWrapper variant="scaleOpacity" delay={0.15}>
+          <CContactContainer />
+        </CAnimatedWrapper>
       </div>
     </div>
   );

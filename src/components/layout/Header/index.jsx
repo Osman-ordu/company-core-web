@@ -33,6 +33,11 @@ const Header = () => {
   };
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    // Route değiştiğinde mobile menüyü kapat
     if (mobileMenuOpen && mobileMenuRef.current) {
       mobileMenuRef.current.classList.add(styles['c-header__mobile-menu--closing']);
 
@@ -44,6 +49,7 @@ const Header = () => {
         document.body.style.overflow = '';
       }, 100);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location.pathname]);
 
   return (
@@ -62,12 +68,15 @@ const Header = () => {
           <NavLink to="/kampanyalar" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
             Kampanyalar
           </NavLink>
+          {/*
+
           <NavLink to="/basinda-biz" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
             Basında Biz
           </NavLink>
           <NavLink to="/is-ortagim" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
             İş Ortağım
           </NavLink>
+          */}
           <NavLink to="/iletisim" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
             İletişim
           </NavLink>
@@ -114,6 +123,8 @@ const Header = () => {
             <FaTag className={styles['c-header__mobile-nav-icon']} />
             Kampanyalar
           </NavLink>
+
+          {/*
           <NavLink to="/basinda-biz" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`} onClick={closeMobileMenu}>
             <FaNewspaper className={styles['c-header__mobile-nav-icon']} />
             Basında Biz
@@ -122,6 +133,7 @@ const Header = () => {
             <FaHandshake className={styles['c-header__mobile-nav-icon']} />
             İş Ortağım
           </NavLink>
+          */}
           <NavLink to="/iletisim" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`} onClick={closeMobileMenu}>
             <FaPhone className={styles['c-header__mobile-nav-icon']} />
             İletişim
@@ -134,51 +146,51 @@ const Header = () => {
             <h3 className={styles['c-header__mobile-contact-title']}>Bize Ulaşın</h3>
 
             <div className={styles['c-header__mobile-contact-item']}>
-              <h4 className={styles['c-header__mobile-contact-subtitle']}>
+              <h4 className={styles['c-header__mobile-contact-subtitle']}>Merkez Ofis:</h4>
+              <p className={styles['c-header__mobile-contact-text']}>
                 <FaMapMarkerAlt className={styles['c-header__mobile-contact-icon']} />
-                Merkez Ofis:
-              </h4>
-              <p className={styles['c-header__mobile-contact-text']}>Maslak Polaris Plaza, Ahi Evran Cad. No:21 Kat:17 34398 Sarıyer/İstanbul</p>
+                Maslak Polaris Plaza, Ahi Evran Cad. No:21 Kat:17 34398 Sarıyer/İstanbul
+              </p>
             </div>
 
             <div className={styles['c-header__mobile-contact-item']}>
-              <h4 className={styles['c-header__mobile-contact-subtitle']}>
+              <h4 className={styles['c-header__mobile-contact-subtitle']}>Çağrı Merkezi:</h4>
+              <p className={styles['c-header__mobile-contact-text']}>
                 <FaPhone className={styles['c-header__mobile-contact-icon']} />
-                Çağrı Merkezi:
-              </h4>
-              <p className={styles['c-header__mobile-contact-text']}>444 09 82</p>
+                444 09 82
+              </p>
             </div>
 
             <div className={styles['c-header__mobile-contact-item']}>
-              <h4 className={styles['c-header__mobile-contact-subtitle']}>
+              <h4 className={styles['c-header__mobile-contact-subtitle']}>WhatsApp Destek Hattı:</h4>
+              <p className={styles['c-header__mobile-contact-text']}>
                 <FaWhatsapp className={styles['c-header__mobile-contact-icon']} />
-                WhatsApp Destek Hattı:
-              </h4>
-              <p className={styles['c-header__mobile-contact-text']}>+90 (850) 811 97 77</p>
+                +90 (850) 811 97 77
+              </p>
             </div>
 
             <div className={styles['c-header__mobile-contact-item']}>
-              <h4 className={styles['c-header__mobile-contact-subtitle']}>
+              <h4 className={styles['c-header__mobile-contact-subtitle']}>E-Posta Adresi:</h4>
+              <p className={styles['c-header__mobile-contact-text']}>
                 <FaEnvelope className={styles['c-header__mobile-contact-icon']} />
-                E-Posta Adresi:
-              </h4>
-              <p className={styles['c-header__mobile-contact-text']}>info@arsago.com.tr</p>
+                info@arsago.com.tr
+              </p>
             </div>
 
             <div className={styles['c-header__mobile-contact-item']}>
-              <h4 className={styles['c-header__mobile-contact-subtitle']}>
+              <h4 className={styles['c-header__mobile-contact-subtitle']}>Çalışma Günleri:</h4>
+              <p className={styles['c-header__mobile-contact-text']}>
                 <FaCalendarAlt className={styles['c-header__mobile-contact-icon']} />
-                Çalışma Günleri:
-              </h4>
-              <p className={styles['c-header__mobile-contact-text']}>Haftanın 7 Günü</p>
+                Haftanın 7 Günü
+              </p>
             </div>
 
             <div className={styles['c-header__mobile-contact-item']}>
-              <h4 className={styles['c-header__mobile-contact-subtitle']}>
+              <h4 className={styles['c-header__mobile-contact-subtitle']}>Çalışma Saatleri:</h4>
+              <p className={styles['c-header__mobile-contact-text']}>
                 <FaClock className={styles['c-header__mobile-contact-icon']} />
-                Çalışma Saatleri:
-              </h4>
-              <p className={styles['c-header__mobile-contact-text']}>10:00 - 18:00</p>
+                10:00 - 18:00
+              </p>
             </div>
           </div>
         </div>
