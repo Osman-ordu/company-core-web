@@ -5,6 +5,7 @@ const Home = lazy(() => import('../pages/home'));
 const Campaigns = lazy(() => import('../pages/campaigns'));
 const About = lazy(() => import('../pages/about'));
 const Projects = lazy(() => import('../pages/projects'));
+const Contact = lazy(() => import('../pages/contact'));
 
 export const routes = [
   {
@@ -25,6 +26,11 @@ export const routes = [
   {
     path: '/projeler',
     element: <Projects />,
+    errorElement: <RouteError />,
+  },
+  {
+    path: '/iletisim',
+    element: <Contact />,
     errorElement: <RouteError />,
   },
 ];

@@ -3,7 +3,7 @@ import CContactForm from '../CContactForm';
 import { FaPhone, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import styles from './styles.module.scss';
 
-const CContactContaner = () => {
+const CContactContainer = () => {
   return (
     <section className={`section-container ${styles['c-contact-container']}`}>
       <div className={styles['c-contact-container__wrapper']}>
@@ -48,4 +48,4 @@ const CContactContaner = () => {
   );
 };
 
-export default CContactContaner;
+export default CContactContainer;
