@@ -50,7 +50,7 @@ const Header = () => {
     <header className={styles['c-header']} onClick={(e) => e.stopPropagation()}>
       <div className={styles['c-header__content']}>
         <Link to="/" className={`${styles['c-header__logo']} ${mobileMenuOpen ? styles['c-header__logo--hidden'] : ''}`} onClick={closeMobileMenu}>
-          ARSAGO
+          ArsaLife
         </Link>
         <nav className={styles['c-header__nav-links']}>
           <NavLink to="/projeler" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
@@ -89,7 +89,7 @@ const Header = () => {
         <header className={styles['c-header__mobile-header']}>
           <div className={styles['c-header__mobile-content']}>
             <Link to="/" className={`${styles['c-header__mobile-logo']} ${!mobileMenuOpen ? styles['c-header__mobile-logo--hidden'] : ''}`} onClick={closeMobileMenu}>
-              ARSAGO
+              ArsaLife
             </Link>
             <div className={styles['c-header__mobile-close-wrapper']}>
               <ThemeToggle />

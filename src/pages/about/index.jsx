@@ -4,56 +4,20 @@ import CVideo from '../../components/CVideo';
 import styles from './styles.module.scss';
 import CTimeline from '../../components/CTimeline';
 import CStats from '../../components/CStats';
+import { timelineItems } from '../../db/General';
+import CQuadrupleArea from '../../components/CQuadrupleArea';
+import CQuadrupleTextArea from '../../components/CQuadrupleTextArea';
+import CFooterBanner from '../../components/CFooterBanner';
 
 const About = () => {
-  const timelineStyles = {
-    root: {},
-    content: {
-      color: 'var(--text-primary)',
-      fontSize: '1.6rem',
-      fontWeight: 600,
-      textAlign: 'left',
-      marginBottom: '2rem',
-      letterSpacing: '-0.05rem',
-      lineHeight: '1.2',
-    },
-    rail: {
-      backgroundColor: 'var(--border-color)',
-      width: '0.5px',
-    },
-    icon: {
-      backgroundColor: 'var(--primary-color)',
-    },
-  };
-
-  const items = [
-    {
-      content: 'Güvenilir tapu güvencesi ve imarlı parseller',
-      styles: timelineStyles,
-    },
-    {
-      content: 'Yasal süreçleri tamamlanmış, risksiz yatırımlar',
-      styles: timelineStyles,
-    },
-    {
-      content: 'Kolay ödeme seçenekleri ile erişilebilir projeler',
-      styles: timelineStyles,
-    },
-    {
-      content: 'Dijital altyapı ile hızlı ve şeffaf bilgilendirme',
-      styles: timelineStyles,
-    },
-  ];
-
   return (
-    <section className={styles['c-about']}>
+    <div className={styles['c-about']}>
       <div className={`section-container ${styles['c-about__wrapper']}`}>
         <div className={styles['c-about__video-section']}>
           <div className={styles['c-about__video-container']}>
             <CVideo videoId={videos.promo} className={styles['c-about__video']} />
           </div>
         </div>
-
         <div className={styles['c-about__content-wrapper']}>
           <div className={styles['c-about__content']}>
             <h4 className={styles['c-about__content-title']}>neden arsago ?</h4>
@@ -72,12 +36,15 @@ const About = () => {
             </p>
           </div>
           <div className={styles['c-about__timeline-container']}>
-            <CTimeline items={items} />
+            <CTimeline items={timelineItems} />
           </div>
         </div>
       </div>
       <CStats />
-    </section>
+      <CQuadrupleArea />
+      <CQuadrupleTextArea />
+      <CFooterBanner />
+    </div>
   );
 };
 

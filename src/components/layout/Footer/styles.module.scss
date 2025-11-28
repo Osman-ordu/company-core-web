@@ -27,15 +27,10 @@
     filter: brightness(1) saturate(1.2);
   }
 
-  // Dark mode için SVG renk ayarı
   [data-theme="dark"] &::before {
-    // Dark mode'da daha yumuşak yeşil için filter
     filter: brightness(0.8) saturate(1.2) hue-rotate(10deg);
   }
 
-  // Üst ve alt border - daha ince ve belirgin
-  border-top: 0.5px solid var(--border-color);
-  border-bottom: 0.5px solid var(--border-color);
 
   &__content {
     position: relative;

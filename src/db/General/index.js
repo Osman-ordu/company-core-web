@@ -397,3 +397,42 @@ export const features = [
       secondary: '2TDLK92kzM',
       promo: 'RW9dalk7YLw',
     };
+    
+    export const timelineStyles = {
+      content: {
+        color: 'var(--text-primary)',
+        fontSize: '1.6rem',
+        fontWeight: 600,
+        textAlign: 'left',
+        marginBottom: '2rem',
+        letterSpacing: '-0.05rem',
+        lineHeight: '1.2',
+      },
+      rail: {
+        backgroundColor: 'var(--border-color)',
+        width: '0.5px',
+      },
+      icon: {
+        backgroundColor: 'var(--primary-color)',
+      },
+    };
+
+    export const timelineItems = [
+        {
+          content: 'Güvenilir tapu güvencesi ve imarlı parseller',
+          styles: timelineStyles,
+        },
+        {
+          content: 'Yasal süreçleri tamamlanmış, risksiz yatırımlar',
+          styles: timelineStyles,
+        },
+        {
+          content: 'Kolay ödeme seçenekleri ile erişilebilir projeler',
+          styles: timelineStyles,
+        },
+        {
+          content: 'Dijital altyapı ile hızlı ve şeffaf bilgilendirme',
+          styles: timelineStyles,
+        },
+
+    ]

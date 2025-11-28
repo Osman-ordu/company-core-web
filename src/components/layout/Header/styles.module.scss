@@ -37,7 +37,17 @@
     text-decoration: none;
     font-family: 'Gilroy', sans-serif;
     transition: opacity 0.2s ease;
-    
+    color: $primary-color;   
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      scale: 1.5;
+      filter: invert(65%) sepia(100%) saturate(210%) hue-rotate(90deg) brightness(100%) contrast(150%);
+
+    }
+
+
     &--hidden {
       opacity: 0;
       visibility: hidden;
@@ -202,6 +212,16 @@
     text-decoration: none;
     font-family: 'Gilroy', sans-serif;
     transition: opacity 0.2s ease;
+    color: $primary-color;
+    
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      scale: 1.5;
+      filter: invert(65%) sepia(100%) saturate(210%) hue-rotate(90deg) brightness(100%) contrast(150%);
+    }
+
     
     &--hidden {
       opacity: 0;
