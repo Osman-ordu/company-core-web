@@ -14,7 +14,7 @@
       width: 45px;
       border-radius: 50%;
       border: 3px solid;
-      border-color: #fff transparent;
+      border-color: var(--primary-color) transparent;
       animation: spin 1s infinite ease-out;
       opacity: 0.5;
       position: absolute;

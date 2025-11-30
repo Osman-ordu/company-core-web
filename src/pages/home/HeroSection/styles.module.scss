@@ -127,7 +127,7 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: var(--bg-primary);
     border: none;
     display: flex;
     align-items: center;
@@ -139,7 +139,7 @@
     pointer-events: auto;
 
     &:hover {
-      background-color: rgba(255, 255, 255, 1);
+      background-color: var(--bg-primary);
       transform: scale(1.05);
     }
 

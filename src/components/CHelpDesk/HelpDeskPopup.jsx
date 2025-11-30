@@ -17,11 +17,7 @@ const HelpDeskPopup = ({ isOpen, onClose, contactActions }) => {
 
   return (
     <>
-      <div
-        className={`${styles['c-help-desk__overlay']} ${isOpen ? styles['c-help-desk__overlay--open'] : ''}`}
-        onClick={handleOverlayClick}
-        aria-hidden={!isOpen}
-      />
+      <div className={`${styles['c-help-desk__overlay']} ${isOpen ? styles['c-help-desk__overlay--open'] : ''}`} onClick={handleOverlayClick} aria-hidden={!isOpen} />
 
       <div
         className={`${styles['c-help-desk__popup']} ${isOpen ? styles['c-help-desk__popup--open'] : ''}`}
@@ -33,15 +29,10 @@ const HelpDeskPopup = ({ isOpen, onClose, contactActions }) => {
       >
         <div className={styles['c-help-desk__header']}>
           <div className={styles['c-help-desk__header-content']}>
-            <h3 id="help-desk-title">arsalife destek hattı</h3>
-            <p>müşteri temsilcilerimiz ile hızlıca iletişim kurun!</p>
+            <h3 id="help-desk-title">Arsalife destek hattı</h3>
+            <p>Müşteri temsilcilerimiz ile hızlıca iletişim kurun!</p>
           </div>
-          <button
-            className={styles['c-help-desk__close']}
-            onClick={onClose}
-            aria-label="Kapat"
-            type="button"
-          >
+          <button className={styles['c-help-desk__close']} onClick={onClose} aria-label="Kapat" type="button">
             <FaX size={ICON_SIZES.CLOSE} />
           </button>
         </div>
@@ -55,4 +46,3 @@ const HelpDeskPopup = ({ isOpen, onClose, contactActions }) => {
 };
 
 export default HelpDeskPopup;
-
