@@ -5,6 +5,7 @@ import ProjectsSection from './ProjectsSection';
 import AboutSection from './AboutSection';
 import PartnerSection from './PartnerSection';
 import CStats from '../../components/CStats';
+import CSocialMedia from '../../components/CSocialMedia';
 import { CAnimatedWrapper } from '../../components/CAnimatedWrapper';
 
 const HomePage = () => {
@@ -27,6 +28,9 @@ const HomePage = () => {
       </CAnimatedWrapper>
       <CAnimatedWrapper variant="scaleOpacity" delay={0.1}>
         <PartnerSection />
+      </CAnimatedWrapper>
+      <CAnimatedWrapper variant="scaleOpacity" delay={0.15}>
+        <CSocialMedia />
       </CAnimatedWrapper>
     </>
   );
