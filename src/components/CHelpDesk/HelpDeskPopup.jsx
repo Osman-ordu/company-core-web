@@ -3,6 +3,7 @@ import { FaX } from 'react-icons/fa6';
 import HelpDeskActions from './HelpDeskActions';
 import styles from './styles.module.scss';
 import { ICON_SIZES } from './constants';
+import { SITE_CONFIG } from '../../config';
 
 const HelpDeskPopup = ({ isOpen, onClose, contactActions }) => {
   const handleOverlayClick = (e) => {
@@ -29,8 +30,10 @@ const HelpDeskPopup = ({ isOpen, onClose, contactActions }) => {
       >
         <div className={styles['c-help-desk__header']}>
           <div className={styles['c-help-desk__header-content']}>
-            <h3 id="help-desk-title">Arsalife destek hattı</h3>
-            <p>Müşteri temsilcilerimiz ile hızlıca iletişim kurun!</p>
+            <h3 id="help-desk-title">
+              {SITE_CONFIG.companyName} {SITE_CONFIG.helpDesk.title}
+            </h3>
+            <p>{SITE_CONFIG.helpDesk.description}</p>
           </div>
           <button className={styles['c-help-desk__close']} onClick={onClose} aria-label="Kapat" type="button">
             <FaX size={ICON_SIZES.CLOSE} />

@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import { FaBuilding, FaPhone } from 'react-icons/fa';
 import { HELP_DESK_EVENTS, BREAKPOINTS } from '../../CHelpDesk/constants';
 import styles from './styles.module.scss';
+import { SITE_CONFIG } from '../../../config';
+
+const iconMap = {
+  FaBuilding,
+  FaPhone,
+};
 
 const BottomNavbar = () => {
   const handleContactClick = (e) => {
@@ -14,14 +20,20 @@ const BottomNavbar = () => {
 
   return (
     <nav className={styles['c-bottom-navbar']}>
-      <Link to="/projeler" className={styles['c-bottom-navbar__item']}>
-        <FaBuilding className={styles['c-bottom-navbar__icon']} />
-        <span className={styles['c-bottom-navbar__text']}>Projeleri İncele</span>
-      </Link>
-      <Link to="/iletisim" className={styles['c-bottom-navbar__item']} onClick={handleContactClick}>
-        <FaPhone className={styles['c-bottom-navbar__icon']} />
-        <span className={styles['c-bottom-navbar__text']}>İletişime Geç</span>
-      </Link>
+      {SITE_CONFIG.navigation.bottomNav.map((item) => {
+        const IconComponent = iconMap[item.icon];
+        return (
+          <Link
+            key={item.path}
+            to={item.path}
+            className={styles['c-bottom-navbar__item']}
+            onClick={item.path === SITE_CONFIG.pages.contact.path ? handleContactClick : undefined}
+          >
+            <IconComponent className={styles['c-bottom-navbar__icon']} />
+            <span className={styles['c-bottom-navbar__text']}>{item.label}</span>
+          </Link>
+        );
+      })}
     </nav>
   );
 };

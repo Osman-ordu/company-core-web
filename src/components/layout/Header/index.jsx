@@ -1,8 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { FaBuilding, FaInfoCircle, FaTag, FaNewspaper, FaHandshake, FaPhone, FaMapMarkerAlt, FaWhatsapp, FaEnvelope, FaCalendarAlt, FaClock } from 'react-icons/fa';
+import { FaBuilding, FaInfoCircle, FaTag, FaPhone, FaMapMarkerAlt, FaWhatsapp, FaEnvelope, FaCalendarAlt, FaClock, FaNewspaper, FaHandshake } from 'react-icons/fa';
 import ThemeToggle from '../../CThemeToggle';
 import styles from './styles.module.scss';
+import { SITE_CONFIG } from '../../../config';
+
+// Icon mapping for menu items
+const iconMap = {
+  FaBuilding,
+  FaInfoCircle,
+  FaTag,
+  FaPhone,
+  FaNewspaper,
+  FaHandshake,
+};
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -56,34 +67,20 @@ const Header = () => {
     <header className={styles['c-header']} onClick={(e) => e.stopPropagation()}>
       <div className={styles['c-header__content']}>
         <Link to="/" className={`${styles['c-header__logo']} ${mobileMenuOpen ? styles['c-header__logo--hidden'] : ''}`} onClick={closeMobileMenu}>
-          ArsaLife
+          {SITE_CONFIG.companyName}
         </Link>
         <nav className={styles['c-header__nav-links']}>
-          <NavLink to="/projeler" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
-            Projeler
-          </NavLink>
-          <NavLink to="/hakkimizda" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
-            Hakkımızda
-          </NavLink>
-          <NavLink to="/kampanyalar" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
-            Kampanyalar
-          </NavLink>
-          {/*
-
-          <NavLink to="/basinda-biz" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
-            Basında Biz
-          </NavLink>
-          <NavLink to="/is-ortagim" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
-            İş Ortağım
-          </NavLink>
-          */}
-          <NavLink to="/iletisim" className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
-            İletişim
-          </NavLink>
+          {SITE_CONFIG.navigation.header
+            .filter((item) => item.enabled)
+            .map((item) => (
+              <NavLink key={item.path} to={item.path} className={({ isActive }) => `${styles['c-header__nav-link']} ${isActive ? styles['c-header__nav-link--active'] : ''}`}>
+                {item.label}
+              </NavLink>
+            ))}
           <div className={styles['c-header__actions']}>
             <ThemeToggle />
-            <a href="tel:4440982" className={styles['c-header__phone-number']}>
-              444 0 982
+            <a href={`tel:${SITE_CONFIG.contact.phone.raw}`} className={styles['c-header__phone-number']}>
+              {SITE_CONFIG.contact.phone.display}
             </a>
           </div>
         </nav>
@@ -98,7 +95,7 @@ const Header = () => {
         <header className={styles['c-header__mobile-header']}>
           <div className={styles['c-header__mobile-content']}>
             <Link to="/" className={`${styles['c-header__mobile-logo']} ${!mobileMenuOpen ? styles['c-header__mobile-logo--hidden'] : ''}`} onClick={closeMobileMenu}>
-              ArsaLife
+              {SITE_CONFIG.companyName}
             </Link>
             <div className={styles['c-header__mobile-close-wrapper']}>
               <ThemeToggle />
@@ -111,45 +108,34 @@ const Header = () => {
           </div>
         </header>
         <div className={styles['c-header__mobile-nav']}>
-          <NavLink to="/projeler" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`} onClick={closeMobileMenu}>
-            <FaBuilding className={styles['c-header__mobile-nav-icon']} />
-            Projeler
-          </NavLink>
-          <NavLink to="/hakkimizda" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`} onClick={closeMobileMenu}>
-            <FaInfoCircle className={styles['c-header__mobile-nav-icon']} />
-            Hakkımızda
-          </NavLink>
-          <NavLink to="/kampanyalar" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`} onClick={closeMobileMenu}>
-            <FaTag className={styles['c-header__mobile-nav-icon']} />
-            Kampanyalar
-          </NavLink>
-
-          {/*
-          <NavLink to="/basinda-biz" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`} onClick={closeMobileMenu}>
-            <FaNewspaper className={styles['c-header__mobile-nav-icon']} />
-            Basında Biz
-          </NavLink>
-          <NavLink to="/is-ortagim" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`} onClick={closeMobileMenu}>
-            <FaHandshake className={styles['c-header__mobile-nav-icon']} />
-            İş Ortağım
-          </NavLink>
-          */}
-          <NavLink to="/iletisim" className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`} onClick={closeMobileMenu}>
-            <FaPhone className={styles['c-header__mobile-nav-icon']} />
-            İletişim
-          </NavLink>
-          <a href="tel:4440982" className={`${styles['c-header__mobile-nav-link']} ${styles['c-header__mobile-phone']}`} onClick={closeMobileMenu}>
-            <span>444 0 982</span>
+          {SITE_CONFIG.navigation.header
+            .filter((item) => item.enabled)
+            .map((item) => {
+              const IconComponent = iconMap[item.icon] || FaPhone;
+              return (
+                <NavLink
+                  key={item.path}
+                  to={item.path}
+                  className={({ isActive }) => `${styles['c-header__mobile-nav-link']} ${isActive ? styles['c-header__mobile-nav-link--active'] : ''}`}
+                  onClick={closeMobileMenu}
+                >
+                  <IconComponent className={styles['c-header__mobile-nav-icon']} />
+                  {item.label}
+                </NavLink>
+              );
+            })}
+          <a href={`tel:${SITE_CONFIG.contact.phone.raw}`} className={`${styles['c-header__mobile-nav-link']} ${styles['c-header__mobile-phone']}`} onClick={closeMobileMenu}>
+            <span>{SITE_CONFIG.contact.phone.display}</span>
           </a>
 
           <div className={styles['c-header__mobile-contact']}>
             <h3 className={styles['c-header__mobile-contact-title']}>Bize Ulaşın</h3>
 
             <div className={styles['c-header__mobile-contact-item']}>
-              <h4 className={styles['c-header__mobile-contact-subtitle']}>Merkez Ofis:</h4>
+              <h4 className={styles['c-header__mobile-contact-subtitle']}>{SITE_CONFIG.contact.address.office.title}:</h4>
               <p className={styles['c-header__mobile-contact-text']}>
                 <FaMapMarkerAlt className={styles['c-header__mobile-contact-icon']} />
-                Maslak Polaris Plaza, Ahi Evran Cad. No:21 Kat:17 34398 Sarıyer/İstanbul
+                {SITE_CONFIG.contact.address.office.full}
               </p>
             </div>
 
@@ -157,7 +143,7 @@ const Header = () => {
               <h4 className={styles['c-header__mobile-contact-subtitle']}>Çağrı Merkezi:</h4>
               <p className={styles['c-header__mobile-contact-text']}>
                 <FaPhone className={styles['c-header__mobile-contact-icon']} />
-                444 09 82
+                {SITE_CONFIG.contact.phone.display}
               </p>
             </div>
 
@@ -165,7 +151,7 @@ const Header = () => {
               <h4 className={styles['c-header__mobile-contact-subtitle']}>WhatsApp Destek Hattı:</h4>
               <p className={styles['c-header__mobile-contact-text']}>
                 <FaWhatsapp className={styles['c-header__mobile-contact-icon']} />
-                +90 (850) 811 97 77
+                {SITE_CONFIG.contact.whatsapp.display}
               </p>
             </div>
 
@@ -173,7 +159,7 @@ const Header = () => {
               <h4 className={styles['c-header__mobile-contact-subtitle']}>E-Posta Adresi:</h4>
               <p className={styles['c-header__mobile-contact-text']}>
                 <FaEnvelope className={styles['c-header__mobile-contact-icon']} />
-                info@arsago.com.tr
+                {SITE_CONFIG.contact.email.general}
               </p>
             </div>
 
@@ -181,7 +167,7 @@ const Header = () => {
               <h4 className={styles['c-header__mobile-contact-subtitle']}>Çalışma Günleri:</h4>
               <p className={styles['c-header__mobile-contact-text']}>
                 <FaCalendarAlt className={styles['c-header__mobile-contact-icon']} />
-                Haftanın 7 Günü
+                {SITE_CONFIG.contact.workingHours.days}
               </p>
             </div>
 
@@ -189,7 +175,7 @@ const Header = () => {
               <h4 className={styles['c-header__mobile-contact-subtitle']}>Çalışma Saatleri:</h4>
               <p className={styles['c-header__mobile-contact-text']}>
                 <FaClock className={styles['c-header__mobile-contact-icon']} />
-                10:00 - 18:00
+                {SITE_CONFIG.contact.workingHours.hours}
               </p>
             </div>
           </div>

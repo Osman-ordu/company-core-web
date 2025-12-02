@@ -1,3 +1,6 @@
+// Config'den import edilen veriler için
+import { SITE_CONFIG } from '../../config';
+
 export const animationVariants = {
   fadeSlideUp: {
     initial: { opacity: 0, y: 60 },
@@ -65,23 +68,23 @@ export const cities = [
   ];
 
 export const features = [
-    {
-      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/zamaninda-teslim-1.svg',
-      title: 'Zamanında eksiksiz teslim',
-    },
-    {
-      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/vadeli-odeme-1.svg',
-      title: 'Vadeli ödeme seçenekleri',
-    },
-    {
-      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/search_1265775.svg',
-      title: 'Güvenli ve şeffaf süreç yönetimi',
-    },
-    {
-      icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/kazanc-firsati-1.svg',
-      title: 'Yatırımda alırken kazanç fırsatı',
-    },
-  ];
+  {
+    icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/zamaninda-teslim-1.svg',
+    title: 'Zamanında eksiksiz teslim',
+  },
+  {
+    icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/vadeli-odeme-1.svg',
+    title: 'Vadeli ödeme seçenekleri',
+  },
+  {
+    icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/search_1265775.svg',
+    title: 'Güvenli ve şeffaf süreç yönetimi',
+  },
+  {
+    icon: 'https://arsago.com.tr/wp-content/uploads/2025/04/kazanc-firsati-1.svg',
+    title: 'Yatırımda alırken kazanç fırsatı',
+  },
+];
 
   export const heroSlides = [
     {
@@ -331,31 +334,19 @@ export const features = [
       },
   ];
 
-  export const projectFilters = [
-    { id: 'all', label: 'Tümü' },
-    { id: 'ongoing', label: 'Satışı Devam Edenler' },
-    { id: 'first-farm', label: 'İlk Tarlam' },
-    { id: 'kep', label: 'KEP' },
-    { id: 'village', label: 'Köyüm Projeleri' },
-    { id: 'villa', label: 'Villa Arsaları' },
-    { id: 'investment', label: 'Yatırım Arsaları' },
-    { id: 'completed', label: 'Satışı Tamamlanan' },
-  ];
+export const projectFilters = [
+  { id: 'all', label: 'Tümü' },
+  { id: 'ongoing', label: 'Satışı Devam Edenler' },
+  { id: 'first-farm', label: 'İlk Tarlam' },
+  { id: 'kep', label: 'KEP' },
+  { id: 'village', label: 'Köyüm Projeleri' },
+  { id: 'villa', label: 'Villa Arsaları' },
+  { id: 'investment', label: 'Yatırım Arsaları' },
+  { id: 'completed', label: 'Satışı Tamamlanan' },
+];
 
-  export const stats = [
-      {
-        number: 22,
-        label: 'Yıllık tecrübe',
-      },
-      {
-        number: 12,
-        label: 'Proje',
-      },
-      {
-        number: 2535,
-        label: 'Memnun müşteri',
-      },
-    ];
+// Stats artık config'den geliyor
+export const stats = SITE_CONFIG.stats;
 
     export   const campaigns = [
       {
@@ -392,11 +383,8 @@ export const features = [
       },
     ];
 
-    export  const videos = {
-      main: 'Q887wtIdozA',
-      secondary: '2TDLK92kzM',
-      promo: 'RW9dalk7YLw',
-    };
+// Videos artık config'den geliyor
+export const videos = SITE_CONFIG.videos;
     
     export const timelineStyles = {
       content: {
@@ -417,22 +405,59 @@ export const features = [
       },
     };
 
-    export const timelineItems = [
-        {
-          content: 'Güvenilir tapu güvencesi ve imarlı parseller',
-          styles: timelineStyles,
-        },
-        {
-          content: 'Yasal süreçleri tamamlanmış, risksiz yatırımlar',
-          styles: timelineStyles,
-        },
-        {
-          content: 'Kolay ödeme seçenekleri ile erişilebilir projeler',
-          styles: timelineStyles,
-        },
-        {
-          content: 'Dijital altyapı ile hızlı ve şeffaf bilgilendirme',
-          styles: timelineStyles,
-        },
+export const timelineItems = [
+  {
+    content: 'Güvenilir tapu güvencesi ve imarlı parseller',
+    styles: timelineStyles,
+  },
+  {
+    content: 'Yasal süreçleri tamamlanmış, risksiz yatırımlar',
+    styles: timelineStyles,
+  },
+  {
+    content: 'Kolay ödeme seçenekleri ile erişilebilir projeler',
+    styles: timelineStyles,
+  },
+  {
+    content: 'Dijital altyapı ile hızlı ve şeffaf bilgilendirme',
+    styles: timelineStyles,
+  },
+];
 
-    ]
+// Footer menü bölümleri
+export const footerLocations = {
+  title: 'NERELERDEYİZ',
+  items: [
+    { label: 'İstanbul', path: '/istanbul' },
+    { label: 'Bursa', path: '/bursa' },
+    { label: 'İzmir', path: '/izmir' },
+    { label: 'Muğla', path: '/mugla' },
+    { label: 'Kırıkkale', path: '/kirikkale' },
+    { label: 'Çanakkale', path: '/canakkale' },
+    { label: 'Balıkesir', path: '/balikesir' },
+    { label: 'Tekirdağ', path: '/tekirdag' },
+  ],
+};
+
+export const footerCorporate = {
+  title: 'KURUMSAL',
+  items: [
+    { label: 'Hakkımızda', path: '/hakkimizda' },
+    { label: 'İş Ortağım', path: '/is-ortagim' },
+    { label: 'Basında Biz', path: '/basinda-biz' },
+    { label: 'Blog', path: '/blog' },
+    { label: 'SSS', path: '/sss' },
+    { label: 'Bize Ulaşın', path: '/iletisim' },
+  ],
+};
+
+export const footerInvestments = {
+  title: 'YATIRIMLARIMIZ',
+  items: [
+    { label: 'KEP - Konut Edindirme Projesi', path: '/kep' },
+    { label: 'İlk Tarlam', path: '/ilk-tarlam' },
+    { label: 'Villa Arsaları', path: '/villa-arsalari' },
+    { label: 'Yatırım Arsaları', path: '/yatirim-arsalari' },
+    { label: 'Köyüm Projesi', path: '/koyum-projesi' },
+  ],
+};

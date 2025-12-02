@@ -7,10 +7,13 @@ import PartnerSection from './PartnerSection';
 import CStats from '../../components/CStats';
 import CSocialMedia from '../../components/CSocialMedia';
 import { CAnimatedWrapper } from '../../components/CAnimatedWrapper';
+import CMetaGenerator from '../../components/CMetaGenerator';
+import { metaData } from '../../db/MetaData';
 
 const HomePage = () => {
   return (
     <>
+      <CMetaGenerator title={metaData.home.title} description={metaData.home.description} keywords={metaData.home.keywords} path={metaData.home.path} />
       <CAnimatedWrapper variant="scaleOpacity" delay={0.1}>
         <HeroSection />
       </CAnimatedWrapper>

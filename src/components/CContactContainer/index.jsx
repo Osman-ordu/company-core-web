@@ -2,6 +2,7 @@ import React from 'react';
 import CContactForm from '../CContactForm';
 import { FaPhone, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
 import styles from './styles.module.scss';
+import { SITE_CONFIG } from '../../config';
 
 const CContactContainer = () => {
   return (
@@ -17,21 +18,21 @@ const CContactContainer = () => {
               <span className={styles['c-contact-container__details-item-label']}>çağrı merkezi:</span>
               <span className={styles['c-contact-container__details-item-value']}>
                 <FaPhone className={styles['c-contact-container__details-item-icon']} />
-                444 0 982
+                {SITE_CONFIG.contact.phone.display}
               </span>
             </li>
             <li className={styles['c-contact-container__details-item']}>
               <span className={styles['c-contact-container__details-item-label']}>whatsapp destek hattı:</span>
               <span className={styles['c-contact-container__details-item-value']}>
                 <FaWhatsapp className={styles['c-contact-container__details-item-icon']} />
-                +90 (850) 811 97 77
+                {SITE_CONFIG.contact.whatsapp.display}
               </span>
             </li>
             <li className={styles['c-contact-container__details-item']}>
               <span className={styles['c-contact-container__details-item-label']}>e-posta adresi:</span>
               <span className={styles['c-contact-container__details-item-value']}>
                 <FaEnvelope className={styles['c-contact-container__details-item-icon']} />
-                info@arsago.com.tr
+                {SITE_CONFIG.contact.email.general}
               </span>
             </li>
           </ul>

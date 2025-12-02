@@ -1,15 +1,18 @@
+import { SITE_CONFIG } from '../../config';
+
+// Contact info artık config'den geliyor
 export const CONTACT_INFO = {
   whatsapp: {
-    phone: '905551234567',
-    url: 'https://wa.me/905551234567',
+    phone: SITE_CONFIG.contact.whatsapp.raw,
+    url: SITE_CONFIG.contact.whatsapp.url,
   },
   phone: {
-    number: '+905551234567',
-    url: 'tel:+905551234567',
+    number: SITE_CONFIG.contact.phone.formatted,
+    url: `tel:${SITE_CONFIG.contact.phone.raw}`,
   },
   email: {
-    address: 'destek@arsalife.com',
-    url: 'mailto:destek@arsalife.com',
+    address: SITE_CONFIG.contact.email.support,
+    url: `mailto:${SITE_CONFIG.contact.email.support}`,
   },
 };
 
