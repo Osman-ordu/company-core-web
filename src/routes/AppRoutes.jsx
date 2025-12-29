@@ -1,4 +1,3 @@
-// routes/AppRoutes.jsx
 import { Routes, Route } from 'react-router-dom';
 import SuspenseWrapper from './SuspenseWrapper';
 import { routes } from './RouteConfig';
