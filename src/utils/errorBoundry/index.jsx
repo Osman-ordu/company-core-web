@@ -1,11 +1,6 @@
 import { Component } from 'react';
 import PropTypes from 'prop-types';
 
-/**
- * ErrorBoundary Component - React 19 Best Practice
- * Catches JavaScript errors anywhere in the child component tree,
- * logs those errors, and displays a fallback UI.
- */
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
@@ -13,24 +8,19 @@ class ErrorBoundary extends Component {
   }
 
   static getDerivedStateFromError(error) {
-    // Update state so the next render will show the fallback UI
     return { hasError: true, error };
   }
 
   componentDidCatch(error, errorInfo) {
-    // Log error to console in development
     if (process.env.NODE_ENV === 'development') {
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
 
-    // Update state with error details
     this.setState({
       error,
       errorInfo,
     });
 
-    // You can also log the error to an error reporting service here
-    // Example: logErrorToService(error, errorInfo);
   }
 
   handleReset = () => {
@@ -43,12 +33,10 @@ class ErrorBoundary extends Component {
 
   render() {
     if (this.state.hasError) {
-      // Custom fallback UI
       if (this.props.fallback) {
         return this.props.fallback(this.state.error, this.handleReset);
       }
 
-      // Default fallback UI
       return (
         <div
           style={{
@@ -108,7 +96,7 @@ class ErrorBoundary extends Component {
 
 ErrorBoundary.propTypes = {
   children: PropTypes.node.isRequired,
-  fallback: PropTypes.func, // (error, resetError) => ReactNode
+  fallback: PropTypes.func, 
 };
 
 export default ErrorBoundary;
