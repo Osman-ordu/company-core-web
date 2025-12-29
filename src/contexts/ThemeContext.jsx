@@ -11,19 +11,16 @@ export const useTheme = () => {
 };
 
 export const ThemeProvider = ({ children }) => {
-  // localStorage'dan tema tercihini oku, yoksa 'light' varsayılan
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem('theme');
     return savedTheme || 'light';
   });
 
-  // Tema değiştiğinde localStorage'a kaydet ve data-theme attribute'unu güncelle
   useEffect(() => {
     localStorage.setItem('theme', theme);
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 
-  // İlk yüklemede data-theme attribute'unu ayarla
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, []);
