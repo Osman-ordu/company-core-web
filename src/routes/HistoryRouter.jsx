@@ -12,9 +12,7 @@ export const HistoryRouter = ({ history, basename, children }) => {
   );
 
   const getSnapshot = useMemo(() => () => history.location, [history]);
-
   const getServerSnapshot = useMemo(() => () => history.location, [history]);
-
   const location = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   const routerProps = useMemo(
