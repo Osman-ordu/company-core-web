@@ -1,26 +1,24 @@
 export const SITE_CONFIG = {
-  // Temel Site Bilgileri
   baseUrl: 'https://www.arsalife.com',
   companyName: 'Arsalife',
-  companyGroupName: 'GO Şirketler Grubu', // Footer copyright için
+  companyGroupName: 'GO Şirketler Grubu', 
   language: 'tr',
-  defaultOgImage: '/default-og-image.jpg', // Meta tags için varsayılan görsel
+  defaultOgImage: '/default-og-image.jpg',
 
-  // İletişim Bilgileri
   contact: {
     phone: {
-      display: '444 0 982', // Görünen format
-      raw: '4440982', // tel: linki için
-      formatted: '+90 444 0 982', // Alternatif format
+      display: '444 0 982',
+      raw: '4440982', 
+      formatted: '+90 444 0 982',
     },
     whatsapp: {
       display: '+90 (850) 811 97 77',
-      raw: '905508119777', // WhatsApp linki için
+      raw: '905508119777',
       url: 'https://wa.me/905508119777',
     },
     email: {
-      general: 'info@arsago.com.tr', // Genel iletişim
-      support: 'destek@arsalife.com', // Destek hattı
+      general: 'info@arsago.com.tr', 
+      support: 'destek@arsalife.com', 
     },
     address: {
       office: {
@@ -48,9 +46,7 @@ export const SITE_CONFIG = {
     },
   },
 
-  // Navigasyon Menüleri
   navigation: {
-    // Header menü öğeleri
     header: [
       {
         label: 'Projeler',
@@ -74,13 +70,13 @@ export const SITE_CONFIG = {
         label: 'Basında Biz',
         path: '/basinda-biz',
         icon: 'FaNewspaper',
-        enabled: false, // Şu an disabled
+        enabled: false,
       },
       {
         label: 'İş Ortağım',
         path: '/is-ortagim',
         icon: 'FaHandshake',
-        enabled: false, // Şu an disabled
+        enabled: false, 
       },
       {
         label: 'İletişim',
@@ -94,7 +90,6 @@ export const SITE_CONFIG = {
         title: 'SİZE NASIL YARDIMCI OLABİLİRİZ ?',
       },
     },
-    // Bottom navbar (mobil için)
     bottomNav: [
       {
         label: 'Projeleri İncele',
@@ -123,20 +118,19 @@ export const SITE_CONFIG = {
       enabled: true,
     },
     youtube: {
-      url: 'https://www.x.com/arsago', // Şu an placeholder
+      url: 'https://www.x.com/arsago', 
       enabled: true,
     },
     linkedin: {
-      url: 'https://www.x.com/arsago', // Şu an placeholder
+      url: 'https://www.x.com/arsago',
       enabled: true,
     },
     tiktok: {
-      url: 'https://www.x.com/arsago', // Şu an placeholder
+      url: 'https://www.x.com/arsago',
       enabled: true,
     },
   },
 
-  // Yasal Linkler
   legal: {
     kvkk: {
       label: 'KVKK',
@@ -148,7 +142,6 @@ export const SITE_CONFIG = {
     },
   },
 
-  // Sayfa Yapılandırması
   pages: {
     home: {
       path: '/',
@@ -172,27 +165,23 @@ export const SITE_CONFIG = {
     },
   },
 
-  // Copyright Bilgileri
   copyright: {
-    year: new Date().getFullYear(), // Dinamik yıl
-    companyName: 'Arsago', // Copyright'ta görünen isim (farklı olabilir)
+    year: new Date().getFullYear(), 
+    companyName: 'Arsago', 
     rightsOwner: 'GO Şirketler Grubu',
   },
 
-  // Tema ve Görsel Ayarları
   theme: {
-    defaultTheme: 'light', // 'light' | 'dark' | 'auto'
+    defaultTheme: 'light',
     enableThemeToggle: true,
   },
 
-  // Help Desk / Destek Hattı
   helpDesk: {
     enabled: true,
     title: 'destek hattı',
     description: 'Müşteri temsilcilerimiz ile hızlıca iletişim kurun!',
   },
 
-  // İstatistikler / Stats
   stats: [
     {
       number: 22,
@@ -208,7 +197,6 @@ export const SITE_CONFIG = {
     },
   ],
 
-  // Video ID'leri (YouTube)
   videos: {
     main: 'Q887wtIdozA',
     secondary: '2TDLK92kzM',
