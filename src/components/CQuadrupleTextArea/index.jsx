@@ -20,7 +20,7 @@ const CQuadrupleTextArea = () => {
     {
       title: 'Eğitim ve iş gücü gelişimi',
       description:
-        'Arsago Akademi, Arsago Sertifika ile sektöre nitelikli iş gücü yetiştirmek. Çalışanlar ve İş Ortaklarının gelişimlerini sağlayarak sektördeki yeniliklere uyum sağlamalarını desteklemek.',
+        'ArsaTR Akademi, ArsaTR Sertifika ile sektöre nitelikli iş gücü yetiştirmek. Çalışanlar ve İş Ortaklarının gelişimlerini sağlayarak sektördeki yeniliklere uyum sağlamalarını desteklemek.',
     },
   ];
 

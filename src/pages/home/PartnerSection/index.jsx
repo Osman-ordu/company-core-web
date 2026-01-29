@@ -9,7 +9,7 @@ const PartnerSection = () => {
         <div className={styles['c-partner__content']}>
           <h3 className={styles['c-partner__title']}>İş Ortağım programıyla kazanmaya hemen başla!</h3>
           <p className={styles['c-partner__text']}>
-            Arsago İş Ortağım Programı, bireysel ve kurumsal emlak danışmanlarına doğrudan ve öncelikli Arsago projelerine erişim sağlayan kârlı ve sürdürülebilir bir iş modeli sunar.
+           ArsaTR İş Ortağım Programı, bireysel ve kurumsal emlak danışmanlarına doğrudan ve öncelikli ArsaTR projelerine erişim sağlayan kârlı ve sürdürülebilir bir iş modeli sunar.
           </p>
           <CButton type="primary" to="/is-ortagim">
             Üye İş Yeri Olmak İstiyorum

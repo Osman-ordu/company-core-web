@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
-  baseUrl: 'https://www.arsalife.com',
-  companyName: 'Arsalife',
+  baseUrl: 'https://www.ArsaTR.com.tr',
+  companyName: 'ArsaTR',
   companyGroupName: 'GO Şirketler Grubu', 
   language: 'tr',
   defaultOgImage: '/default-og-image.jpg',
@@ -17,8 +17,8 @@ export const SITE_CONFIG = {
       url: 'https://wa.me/905508119777',
     },
     email: {
-      general: 'info@arsago.com.tr', 
-      support: 'destek@arsalife.com', 
+      general: 'info@ArsaTR.com.tr', 
+      support: 'destek@ArsaTR.com.tr', 
     },
     address: {
       office: {
@@ -106,27 +106,27 @@ export const SITE_CONFIG = {
 
   socialMedia: {
     instagram: {
-      url: 'https://www.instagram.com/arsago.com.tr',
+      url: 'https://www.instagram.com/ArsaTR.com.tr',
       enabled: true,
     },
     facebook: {
-      url: 'https://www.facebook.com/arsago.com.tr',
+      url: 'https://www.facebook.com/ArsaTR.com.tr',
       enabled: true,
     },
     twitter: {
-      url: 'https://www.x.com/arsago',
+      url: 'https://www.x.com/ArsaTR',
       enabled: true,
     },
     youtube: {
-      url: 'https://www.x.com/arsago', 
+      url: 'https://www.x.com/ArsaTR', 
       enabled: true,
     },
     linkedin: {
-      url: 'https://www.x.com/arsago',
+      url: 'https://www.x.com/ArsaTR',
       enabled: true,
     },
     tiktok: {
-      url: 'https://www.x.com/arsago',
+      url: 'https://www.x.com/ArsaTR',
       enabled: true,
     },
   },
@@ -167,7 +167,7 @@ export const SITE_CONFIG = {
 
   copyright: {
     year: new Date().getFullYear(), 
-    companyName: 'Arsago', 
+    companyName: 'ArsaTR', 
     rightsOwner: 'GO Şirketler Grubu',
   },
 

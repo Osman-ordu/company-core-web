@@ -9,14 +9,14 @@ const AboutSection = () => {
     <>
       <section className={styles['c-about']}>
         <div className={`section-container ${styles['c-about__wrapper']}`}>
-          <h2 className={styles['c-about__title']}>Neden ARSAGO ?</h2>
+          <h2 className={styles['c-about__title']}>Neden ArsaTR ?</h2>
           <div className={styles['c-about__video-container']}>
             <CVideo videoId={videos.main} className={styles['c-about__video']} />
           </div>
           <div className={styles['c-about__content']}>
-            <h2 className={styles['c-about__title--desktop']}>Neden ARSAGO ?</h2>
+            <h2 className={styles['c-about__title--desktop']}>Neden ArsaTR ?</h2>
             <p className={styles['c-about__text']}>
-              Arsago, gayrimenkul yatırımına yenilikçi bir bakış sunan, arsa geliştirme ve proje üretiminde uzmanlaşmış bir yatırım şirketidir.
+              ArsaTR, gayrimenkul yatırımına yenilikçi bir bakış sunan, arsa geliştirme ve proje üretiminde uzmanlaşmış bir yatırım şirketidir.
               <br />
               <br />
               Doğada yaşamı, şehirde kazancı mümkün kılarken; yatırımcılarına risksiz, şeffaf ve sürdürülebilir fırsatlar sunar.
