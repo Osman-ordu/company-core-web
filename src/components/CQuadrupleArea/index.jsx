@@ -4,7 +4,7 @@ import styles from './styles.module.scss';
 const CQuadrupleArea = () => {
   const main = [
     {
-      title: 'arsaysa o, arsago!',
+      title: 'arsaysa o, ArsaTR!',
       imageDesktop: 'https://arsago.com.tr/wp-content/uploads/2025/04/arsaysa-o-arsago-445x445.png',
       imageMobile: 'https://arsago.com.tr/wp-content/uploads/2025/04/arsaysa-o-arsago-220x220.png',
     },

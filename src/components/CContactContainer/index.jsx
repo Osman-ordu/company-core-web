@@ -41,7 +41,7 @@ const CContactContainer = () => {
           <CContactForm
             className={styles['c-contact-container__form-form']}
             title="İletişim formu"
-            description="Müşteri temsilcilerimiz ile yatırımlarınız ile ilgili görüşme sağlayarak hemen arsago ailesine katılın!"
+            description="Müşteri temsilcilerimiz ile yatırımlarınız ile ilgili görüşme sağlayarak hemen ArsaTR ailesine katılın!"
           />
         </div>
       </div>
